@@ -978,7 +978,20 @@ def serve_data_file(filename: str):
     media = "application/json" if filename.endswith(".json") else "application/octet-stream"
     return FileResponse(path, media_type=media)
 
-# Catch-all static files handler — serves js/, styles/, assets/ from project root
+@app.get("/favicon.ico")
+def serve_favicon():
+    p = os.path.join(BASE_DIR, "assets", "founders-logo.png")
+    if os.path.exists(p):
+        return FileResponse(p, media_type="image/png")
+    raise HTTPException(status_code=404)
+
+# Explicit static mounts for assets, styles, and js
+for folder in ["styles", "js", "assets"]:
+    folder_path = os.path.join(BASE_DIR, folder)
+    if os.path.isdir(folder_path):
+        app.mount(f"/{folder}", StaticFiles(directory=folder_path), name=folder)
+
+# Catch-all static files handler — serves root files from project root
 app.mount("/", StaticFiles(directory=BASE_DIR, html=True), name="static")
 
 if __name__ == "__main__":
