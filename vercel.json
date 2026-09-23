@@ -1,57 +1,40 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "server.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "server.py"
+      "source": "/admin",
+      "destination": "/admin.html"
     },
     {
-      "src": "/uploads/(.*)",
-      "dest": "server.py"
-    },
-    {
-      "src": "/admin",
-      "dest": "server.py"
-    },
-    {
-      "src": "/admin.html",
-      "dest": "server.py"
-    },
-    {
-      "src": "/styles/(.*)",
-      "headers": { "Cache-Control": "public, max-age=86400" },
-      "dest": "/styles/$1"
-    },
-    {
-      "src": "/js/(.*)",
-      "headers": { "Cache-Control": "public, max-age=86400" },
-      "dest": "/js/$1"
-    },
-    {
-      "src": "/assets/(.*)",
-      "headers": { "Cache-Control": "public, max-age=604800, immutable" },
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/data/(.*)",
-      "headers": { "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400" },
-      "dest": "/data/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "server.py"
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
     }
   ],
   "headers": [
+    {
+      "source": "/styles/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
