@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founders Community | Master CMS &amp; Control Center</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/brand-badge.svg">
+  <link rel="stylesheet" href="styles/admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- AUTH LOGIN GUARD OVERLAY -->
+  <div id="auth-screen" class="auth-screen">
+    <div class="auth-card">
+      <div class="auth-brand">
+        <div class="auth-brand-symbol">
+          <svg width="16" height="16" viewBox="0 0 100 100" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M50 20 C66 20 80 34 80 50 C80 66 66 80 50 80 C34 80 20 66 20 50 C20 34 34 20 50 20 Z M50 34 C50 43 44 50 35 50 C44 50 50 57 50 66 C50 57 56 50 65 50 C56 50 50 43 50 34 Z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <span class="auth-title">Founders Community</span>
+      </div>
+      <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Master Control Center</h2>
+      <p class="auth-subtitle">Full real-time control over all events, stories, pitch days, regions, stats, and JSON records.</p>
+
+      <form id="login-form">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Username</label>
+          <input type="text" id="login-username" class="form-input" placeholder="admin" required value="admin">
+        </div>
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label class="form-label">Password</label>
+          <input type="password" id="login-password" class="form-input" placeholder="founders2026!" required value="founders2026!">
+        </div>
+        <div id="login-error" style="display: none; color: #EF4444; font-size: 0.8125rem; margin-bottom: 1rem;"></div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; justify-content: center;">
+          Authenticate &amp; Open Control Center &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD LAYOUT -->
+  <div class="admin-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <div class="auth-brand-symbol" style="width:26px; height:26px;">
+          <svg width="14" height="14" viewBox="0 0 100 100" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M50 20 C66 20 80 34 80 50 C80 66 66 80 50 80 C34 80 20 66 20 50 C20 34 34 20 50 20 Z M50 34 C50 43 44 50 35 50 C44 50 50 57 50 66 C50 57 56 50 65 50 C56 50 50 43 50 34 Z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div>
+          <div style="font-weight:700; font-size:0.95rem;">Founders CMS</div>
+          <div style="font-size:0.6875rem; color:var(--text-muted); font-family:var(--font-mono);">TOTAL CONTROL ACTIVE</div>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li>
+          <button class="nav-item-btn active" data-tab="dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Dashboard
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="opportunities">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
+            Live Radar &amp; Events
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="pitchdays">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+            Pitch Days &amp; Stages
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="stories">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            Field Dispatches (Stories)
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="stats">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+            Key Stats &amp; Numbers
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="pathway">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            How It Works (Pathway)
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="regions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+            Regional Registry
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="partners">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Partners &amp; Capital
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="gallery">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            Documentary Gallery
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="rawjson" style="color:#F59E0B;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Raw JSON Editor
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="media">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            Media Library
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-tab="settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            Settings &amp; Backup
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-info">LOGGED IN AS: <span id="current-user-name">admin</span></div>
+        <a href="/" target="_blank" class="btn btn-secondary btn-sm" style="width:100%; justify-content:center;">
+          View Public Site &nearr;
+        </a>
+        <button id="logout-btn" class="btn btn-danger btn-sm" style="width:100%; justify-content:center;">
+          Sign Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 id="active-tab-title" class="page-title">Dashboard</h1>
+          <p style="font-size:0.8125rem; color:var(--text-muted); margin-top:0.25rem;" id="active-tab-desc">
+            Real-time management portal with instant 2-way live sync to website and Vercel dataset.
+          </p>
+        </div>
+        <div class="header-actions" id="header-actions">
+          <!-- Dynamic Action Button per tab -->
+        </div>
+      </header>
+
+      <!-- 1. DASHBOARD OVERVIEW TAB -->
+      <section id="tab-dashboard" class="tab-section active">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label">Active Opportunities</span>
+            <span class="metric-val" id="dash-opps-count">0</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Field Stories</span>
+            <span class="metric-val" id="dash-stories-count">0</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Pitch Cities</span>
+            <span class="metric-val" id="dash-pitch-count">0</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Regional Chapters</span>
+            <span class="metric-val" id="dash-regions-count">0</span>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:1.5rem; margin-top:1.5rem;">
+          <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+              <h3 style="font-size:1.1rem; font-weight:700;">Live Sync &amp; Deployment Status</h3>
+              <span class="status-badge live">● 2-Way Sync Active</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.25rem;">
+              Every edit you make in any tab is <strong>immediately written</strong> to both the SQLite database and <code style="color:var(--brand-vermilion); font-family:var(--font-mono);">data/community.json</code>. Your live site updates instantly on refresh, and your repository is always 100% ready for zero-configuration Vercel deployment.
+            </p>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <button class="btn btn-primary btn-sm" id="dash-save-all-btn">
+                ⚡ Force Re-Sync Entire Site
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="window.FC_ADMIN.switchTab('rawjson')">
+                📝 Open Full JSON Editor &rarr;
+              </button>
+              <a href="/" target="_blank" class="btn btn-secondary btn-sm">
+                🌐 Open Public Homepage &nearr;
+              </a>
+            </div>
+          </div>
+
+          <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem;">
+            <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem;">Quick Navigation</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem;">
+              <li><a href="javascript:void(0)" onclick="window.FC_ADMIN.switchTab('opportunities')" style="color:var(--text-primary); text-decoration:none;">→ Manage Live Radar &amp; Events</a></li>
+              <li><a href="javascript:void(0)" onclick="window.FC_ADMIN.switchTab('pitchdays')" style="color:var(--text-primary); text-decoration:none;">→ Update Pitch Day Cities &amp; Venues</a></li>
+              <li><a href="javascript:void(0)" onclick="window.FC_ADMIN.switchTab('stories')" style="color:var(--text-primary); text-decoration:none;">→ Write Founder Stories &amp; Dispatches</a></li>
+              <li><a href="javascript:void(0)" onclick="window.FC_ADMIN.switchTab('stats')" style="color:var(--text-primary); text-decoration:none;">→ Edit Top 4 Statistics</a></li>
+              <li><a href="javascript:void(0)" onclick="window.FC_ADMIN.switchTab('rawjson')" style="color:#F59E0B; text-decoration:none;">→ Full Raw JSON Control</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. OPPORTUNITIES & EVENTS TAB -->
+      <section id="tab-opportunities" class="tab-section">
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Date &amp; Location</th>
+                <th>Status Tag</th>
+                <th>Action Button</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="opps-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3. PITCH DAYS & STAGES TAB -->
+      <section id="tab-pitchdays" class="tab-section">
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap:1.25rem;" id="pitchdays-grid">
+          <!-- Dynamically populated city cards -->
+        </div>
+      </section>
+
+      <!-- 4. STORIES & FIELD DISPATCHES TAB -->
+      <section id="tab-stories" class="tab-section">
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Cover</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category / Region</th>
+                <th>Read Time</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="stories-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5. KEY STATS TAB -->
+      <section id="tab-stats" class="tab-section">
+        <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem; max-width:800px;">
+          <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.5rem;">Homepage Header Statistics</h3>
+          <p style="font-size:0.8125rem; color:var(--text-muted); margin-bottom:1.5rem;">
+            These 4 key metrics appear right below the hero header on the public website.
+          </p>
+          <form id="stats-form">
+            <div id="stats-inputs-container" style="display:flex; flex-direction:column; gap:1.25rem;">
+              <!-- 4 stat blocks dynamically rendered -->
+            </div>
+            <div style="margin-top:1.5rem;">
+              <button type="submit" class="btn btn-primary">Save All Statistics &amp; Sync Live</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 6. HOW IT WORKS (PATHWAY) TAB -->
+      <section id="tab-pathway" class="tab-section">
+        <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem; max-width:900px;">
+          <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.5rem;">4-Step Ecosystem Pathway</h3>
+          <p style="font-size:0.8125rem; color:var(--text-muted); margin-bottom:1.5rem;">
+            Edit the Discover, Connect, Build, and Grow pathway cards shown on the homepage.
+          </p>
+          <form id="pathway-form">
+            <div id="pathway-inputs-container" style="display:flex; flex-direction:column; gap:1.5rem;">
+              <!-- 4 pathway step blocks -->
+            </div>
+            <div style="margin-top:1.5rem;">
+              <button type="submit" class="btn btn-primary">Save Ecosystem Pathway</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 7. REGIONAL REGISTRY TAB -->
+      <section id="tab-regions" class="tab-section">
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Region Name</th>
+                <th>Status</th>
+                <th>Active Hub</th>
+                <th>Lead / Chapter Mentor</th>
+                <th>Key Focus</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="regions-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 8. PARTNERS TAB -->
+      <section id="tab-partners" class="tab-section">
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Logo</th>
+                <th>Partner Name</th>
+                <th>Category</th>
+                <th>Verified Role</th>
+                <th>Website</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="partners-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 9. GALLERY TAB -->
+      <section id="tab-gallery" class="tab-section">
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.25rem;" id="gallery-cards-grid">
+          <!-- Dynamically populated gallery cards -->
+        </div>
+      </section>
+
+      <!-- 10. RAW JSON EDITOR TAB -->
+      <section id="tab-rawjson" class="tab-section">
+        <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.75rem;">
+            <div>
+              <h3 style="font-size:1.1rem; font-weight:700; color:#F59E0B;">Full Master JSON Editor (community.json)</h3>
+              <p style="font-size:0.8125rem; color:var(--text-muted);">Direct live access to all records. Format, edit, validate, and save with one click.</p>
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button class="btn btn-secondary btn-sm" id="btn-format-json">⚡ Format &amp; Prettify</button>
+              <button class="btn btn-secondary btn-sm" id="btn-reload-json">🔄 Reload from Disk</button>
+              <button class="btn btn-primary btn-sm" id="btn-save-raw-json">💾 Save &amp; Sync Entire Site</button>
+            </div>
+          </div>
+          <div id="json-editor-status" style="display:none; padding:0.6rem 1rem; border-radius:4px; margin-bottom:1rem; font-size:0.8125rem; font-family:var(--font-mono);"></div>
+          <textarea id="raw-json-textarea" class="form-textarea" style="width:100%; height:550px; font-family:var(--font-mono); font-size:0.8125rem; line-height:1.5; background:#0A0C10; color:#A7F3D0; border-color:var(--border-medium);"></textarea>
+        </div>
+      </section>
+
+      <!-- 11. MEDIA LIBRARY TAB -->
+      <section id="tab-media" class="tab-section">
+        <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between;">
+          <input type="text" id="media-search" class="form-input" placeholder="Search media files by name..." style="max-width: 350px;">
+          <label class="btn btn-primary" style="cursor:pointer;">
+            + Upload Images
+            <input type="file" id="media-upload-input" multiple accept="image/*" style="display:none;">
+          </label>
+        </div>
+        <div class="media-grid" id="media-library-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- 12. SETTINGS & BACKUP TAB -->
+      <section id="tab-settings" class="tab-section">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
+          <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem;">
+            <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:1rem;">Backup &amp; Export Data</h3>
+            <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.25rem;">
+              Download a full backup of your entire community dataset as a JSON file, or restore from a previous backup.
+            </p>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <button class="btn btn-primary" id="btn-export-backup">
+                ⬇️ Download community.json Backup
+              </button>
+              <label class="btn btn-secondary" style="cursor:pointer;">
+                ⬆️ Restore from Backup JSON
+                <input type="file" id="btn-import-backup" accept=".json" style="display:none;">
+              </label>
+            </div>
+          </div>
+
+          <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem;">
+            <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:1rem;">Change Admin Password</h3>
+            <form id="password-change-form">
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label class="form-label">Current Password</label>
+                <input type="password" id="pw-old" class="form-input" required>
+              </div>
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label class="form-label">New Password</label>
+                <input type="password" id="pw-new" class="form-input" required>
+              </div>
+              <div class="form-group" style="margin-bottom:1.25rem;">
+                <label class="form-label">Confirm New Password</label>
+                <input type="password" id="pw-confirm" class="form-input" required>
+              </div>
+              <div id="pw-msg" style="display:none; font-size:0.85rem; margin-bottom:1rem;"></div>
+              <button type="submit" class="btn btn-primary">Update Password</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- OPPORTUNITY MODAL -->
+  <div class="modal-overlay" id="modal-opp">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-opp-title">Create Opportunity / Event</h3>
+        <button class="btn btn-secondary btn-sm close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-opp">
+          <input type="hidden" id="opp-id">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label class="form-label">Title *</label>
+              <input type="text" id="opp-title" class="form-input" required placeholder="Tashkent Pitch Day — Autumn 2026">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Category *</label>
+              <input type="text" id="opp-category" class="form-input" required placeholder="Pitch Days">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Filter Tab *</label>
+              <select id="opp-type" class="form-select" required>
+                <option value="events">Events &amp; Talks</option>
+                <option value="programs">Startup Programs &amp; Sprints</option>
+                <option value="opportunities">Mentorship &amp; Grants</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date Display Text *</label>
+              <input type="text" id="opp-date" class="form-input" required placeholder="October 24, 2026">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Location / Hub *</label>
+              <input type="text" id="opp-location" class="form-input" required placeholder="Tashkent • C-Space Yunusabad">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Status Tag *</label>
+              <input type="text" id="opp-status" class="form-input" required placeholder="Active Intake">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Badge Tag</label>
+              <input type="text" id="opp-tag" class="form-input" placeholder="Flagship, Regional, Grant">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Target Audience</label>
+              <input type="text" id="opp-target" class="form-input" placeholder="Pre-seed &amp; Seed Founders">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Description *</label>
+              <textarea id="opp-desc" class="form-textarea" required rows="3" placeholder="Description of the event or program..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Action Button Text</label>
+              <input type="text" id="opp-action" class="form-input" placeholder="Apply to Pitch">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="save-opp-btn">Save Opportunity &amp; Sync Live</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PITCH CITY MODAL -->
+  <div class="modal-overlay" id="modal-pitch-city">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-pitch-title">Edit Pitch Stage City</h3>
+        <button class="btn btn-secondary btn-sm close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-pitch-city">
+          <input type="hidden" id="pitch-city-id">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">City Name *</label>
+              <input type="text" id="pitch-city-name" class="form-input" required placeholder="Samarkand">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Region Label *</label>
+              <input type="text" id="pitch-city-region" class="form-input" required placeholder="Silk Road Hub">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Status Text *</label>
+              <input type="text" id="pitch-city-status" class="form-input" required placeholder="Upcoming: Nov 8, 2026">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Venue *</label>
+              <input type="text" id="pitch-city-venue" class="form-input" required placeholder="Samarkand IT Park">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Past Cohorts (Number)</label>
+              <input type="number" id="pitch-city-cohorts" class="form-input" placeholder="4">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Founders Pitched (Number)</label>
+              <input type="number" id="pitch-city-pitched" class="form-input" placeholder="32">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Investors Present</label>
+              <input type="text" id="pitch-city-investors" class="form-input" placeholder="8+ Angels &amp; Seed Funds">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">City Description *</label>
+              <textarea id="pitch-city-desc" class="form-textarea" required rows="3"></textarea>
+            </div>
+            <div class="form-group full">
+              <label class="form-label">GPS Coordinates</label>
+              <input type="text" id="pitch-city-coords" class="form-input" placeholder="39.6542° N, 66.9597° E">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="save-pitch-city-btn">Save Pitch Stage</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY MODAL -->
+  <div class="modal-overlay" id="modal-story">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-story-title">Create Story / Dispatch</h3>
+        <button class="btn btn-secondary btn-sm close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-story">
+          <input type="hidden" id="story-id">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label class="form-label">Story Title *</label>
+              <input type="text" id="st-title" class="form-input" required placeholder="Building Agritech Hardware Outside Tashkent">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Author Name *</label>
+              <input type="text" id="st-author" class="form-input" required placeholder="Aziz Rakhimov">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Author Role / Company</label>
+              <input type="text" id="st-role" class="form-input" placeholder="Founder, AgroSense">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Category *</label>
+              <input type="text" id="st-category" class="form-input" required placeholder="Case Study">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Region *</label>
+              <input type="text" id="st-region" class="form-input" required placeholder="Samarkand">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Read Time</label>
+              <input type="text" id="st-readtime" class="form-input" placeholder="6 min read">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="text" id="st-date" class="form-input" placeholder="October 2026">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Cover Image Path / URL *</label>
+              <input type="text" id="st-cover" class="form-input" required placeholder="assets/hero.jpg">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Excerpt / Summary *</label>
+              <textarea id="st-excerpt" class="form-textarea" required rows="3" placeholder="Brief summary of the article..."></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="save-story-btn">Save Story &amp; Sync Live</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGION MODAL -->
+  <div class="modal-overlay" id="modal-region">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-region-title">Edit Regional Chapter</h3>
+        <button class="btn btn-secondary btn-sm close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-region">
+          <input type="hidden" id="reg-id">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Region Name *</label>
+              <input type="text" id="reg-name" class="form-input" required placeholder="Samarkand Region">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Status *</label>
+              <input type="text" id="reg-status" class="form-input" required placeholder="Active Chapter">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Active Hub / Venue</label>
+              <input type="text" id="reg-hub" class="form-input" placeholder="Samarkand IT Park">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Chapter Lead / Mentor</label>
+              <input type="text" id="reg-lead" class="form-input" placeholder="Shavkat Mirzayev">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Ecosystem Focus</label>
+              <input type="text" id="reg-focus" class="form-input" placeholder="Agritech, Tourism &amp; Cultural Heritage">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Summary / Description</label>
+              <textarea id="reg-desc" class="form-textarea" rows="2"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="save-region-btn">Save Regional Chapter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTNER MODAL -->
+  <div class="modal-overlay" id="modal-partner">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-partner-title">Add / Edit Partner</h3>
+        <button class="btn btn-secondary btn-sm close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-partner">
+          <input type="hidden" id="partner-id">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Partner Name *</label>
+              <input type="text" id="pt-name" class="form-input" required placeholder="Yoshlar Ventures">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Category *</label>
+              <input type="text" id="pt-category" class="form-input" required placeholder="Venture Capital">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Verified Role *</label>
+              <input type="text" id="pt-role" class="form-input" required placeholder="Seed &amp; Pre-Seed Partner">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Website URL</label>
+              <input type="text" id="pt-url" class="form-input" placeholder="https://...">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Logo Path or Image URL</label>
+              <input type="text" id="pt-logo" class="form-input" placeholder="assets/yoshlar-ventures.png">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Description *</label>
+              <textarea id="pt-desc" class="form-textarea" required rows="2" placeholder="Brief description of partnership..."></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="save-partner-btn">Save Partner</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY ITEM MODAL -->
+  <div class="modal-overlay" id="modal-gallery-item">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-gallery-title">Add / Edit Gallery Item</h3>
+        <button class="btn btn-secondary btn-sm close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-gallery-item">
+          <input type="hidden" id="gal-id">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label class="form-label">Caption *</label>
+              <input type="text" id="gal-caption" class="form-input" required placeholder="Tashkent Demo Night Cohort III">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Subtext / Date</label>
+              <input type="text" id="gal-subtext" class="form-input" placeholder="October 2026 • 12 Teams Demoing">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Image Source Path *</label>
+              <input type="text" id="gal-src" class="form-input" required placeholder="assets/event-1.jpg">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Alt Text</label>
+              <input type="text" id="gal-alt" class="form-input" placeholder="Founders presenting at Tashkent Demo Night">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="save-gallery-item-btn">Save Gallery Item</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="js/admin.js"></script>
+</body>
+</html>

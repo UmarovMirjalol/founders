@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server.py"
+    },
+    {
+      "src": "/uploads/(.*)",
+      "dest": "server.py"
+    },
+    {
+      "src": "/admin",
+      "dest": "server.py"
+    },
+    {
+      "src": "/admin.html",
+      "dest": "server.py"
+    },
+    {
+      "src": "/styles/(.*)",
+      "headers": { "Cache-Control": "public, max-age=86400" },
+      "dest": "/styles/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "headers": { "Cache-Control": "public, max-age=86400" },
+      "dest": "/js/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "headers": { "Cache-Control": "public, max-age=604800, immutable" },
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/data/(.*)",
+      "headers": { "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400" },
+      "dest": "/data/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.py"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

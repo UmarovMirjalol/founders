@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none">
+  <!-- Exact Founders wordmark recreation with four-point star cutout in the 'o' -->
+  <style>
+    .brand-text {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Geist", "Segoe UI", Roboto, sans-serif;
+      font-weight: 900;
+      font-size: 76px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <g fill="currentColor">
+    <!-- f -->
+    <path d="M26 18 C38 18 46 25 46 38 L46 44 L58 44 L58 58 L46 58 L46 95 L26 95 L26 58 L12 58 L12 44 L26 44 L26 38 C26 31 29 27 35 27 Z" />
+    <!-- o with four-point diamond star spark cutout -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M102 42 C120 42 134 54 134 70 C134 86 120 98 102 98 C84 98 70 86 70 70 C70 54 84 42 102 42 Z M102 56 C102 64 97 70 89 70 C97 70 102 76 102 84 C102 76 107 70 115 70 C107 70 102 64 102 56 Z" />
+    <!-- u -->
+    <path d="M148 44 L168 44 L168 74 C168 81 172 84 179 84 C186 84 190 81 190 74 L190 44 L210 44 L210 74 C210 90 197 98 179 98 C161 98 148 90 148 74 Z" />
+    <!-- n -->
+    <path d="M224 44 L244 44 L244 54 C249 46 259 42 270 42 C285 42 294 51 294 67 L294 95 L274 95 L274 69 C274 61 270 57 263 57 C254 57 244 63 244 73 L244 95 L224 95 Z" />
+    <!-- d -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M344 18 L364 18 L364 95 L346 95 L346 86 C340 94 330 98 318 98 C301 98 288 85 288 70 C288 54 301 42 318 42 C330 42 340 47 344 55 Z M326 57 C317 57 308 63 308 70 C308 77 317 83 326 83 C335 83 344 77 344 70 C344 63 335 57 326 57 Z" />
+    <!-- e -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M410 66 C409 51 398 42 384 42 C369 42 357 54 357 70 C357 87 369 98 386 98 C398 98 408 92 413 83 L397 74 C394 79 390 82 385 82 C378 82 374 77 374 71 L410 71 Z M374 60 C375 55 379 51 384 51 C389 51 393 55 394 60 Z" />
+    <!-- r -->
+    <path d="M424 44 L443 44 L443 55 C447 47 455 42 464 42 L467 42 L467 61 C453 60 444 68 444 80 L444 95 L424 95 Z" />
+    <!-- s -->
+    <path d="M482 77 C484 81 489 84 496 84 C503 84 507 81 507 77 C507 72 503 70 493 67 C480 64 471 59 471 49 C471 39 481 31 495 31 C509 31 519 39 520 50 L503 54 C502 49 499 46 494 46 C489 46 486 49 486 52 C486 56 489 58 499 60 C513 64 523 69 523 79 C523 90 512 98 497 98 C481 98 471 89 469 77 Z" />
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+# Robots.txt for Founders Community Uzbekistan
+User-agent: *
+Allow: /
+
+Sitemap: https://founders.uz/sitemap.xml

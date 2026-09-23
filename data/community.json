@@ -1,0 +1,926 @@
+{
+  "stats": [
+    {
+      "value": "1,250+",
+      "label": "Founders connected",
+      "subtext": "Active technical builders, student creators & operators"
+    },
+    {
+      "value": "12",
+      "label": "Regions",
+      "subtext": "Active chapters across Uzbekistan & Central Asia"
+    },
+    {
+      "value": "8+",
+      "label": "Ecosystem partners",
+      "subtext": "Venture funds, innovation hubs & global bridges"
+    },
+    {
+      "value": "20+",
+      "label": "Community events",
+      "subtext": "Regional pitch days, founder talks & cohorts"
+    }
+  ],
+  "howItWorks": [
+    {
+      "id": "discover",
+      "step": "01",
+      "title": "Discover",
+      "subtitle": "Find events, startup programs, opportunities, and people.",
+      "summary": "Uncover live ecosystem activities across all 12 regions, from hackathons and pitch days to grant opportunities and high-signal research dispatches.",
+      "tags": ["Events Calendar", "Grant Radar", "Regional Dispatches", "Talent Directory"],
+      "deliverables": "Get curated weekly intelligence on open cohorts, funding calls, and founder meetups across Uzbekistan and Central Asia."
+    },
+    {
+      "id": "connect",
+      "step": "02",
+      "title": "Connect",
+      "subtitle": "Meet founders, builders, mentors, investors, and ecosystem partners.",
+      "summary": "Break out of isolated building. Connect directly with vetted co-founders, experienced technical operators, and regional angel investors.",
+      "tags": ["1-on-1 Office Hours", "Peer Masterminds", "Investor Introductions", "Alumni Network"],
+      "deliverables": "Direct access to our verified directory of founders, engineering mentors, and early-stage capital allocators."
+    },
+    {
+      "id": "build",
+      "step": "03",
+      "title": "Build",
+      "subtitle": "Join events, accelerators, projects, and startup initiatives.",
+      "summary": "Test early prototypes in high-velocity cohorts. Receive rigorous operator critique, build MVPs, and validate real customer demand.",
+      "tags": ["Pitch Cohorts", "Hack Sprints", "Product Tear-Downs", "Legal & Cap Table Prep"],
+      "deliverables": "Structured 8-week validation sprints, customer discovery frameworks, and technical architecture reviews."
+    },
+    {
+      "id": "grow",
+      "step": "04",
+      "title": "Grow",
+      "subtitle": "Turn connections into partnerships, teams, investment opportunities, and real ventures.",
+      "summary": "Scale beyond local borders. Secure pre-seed/seed capital, recruit elite student engineers, and expand into Central Asian & global markets.",
+      "tags": ["Demo Day Access", "Cross-Border Expansion", "Follow-on Capital", "Ecosystem Pilots"],
+      "deliverables": "Institutional introductions to VC funds, cross-border pilot partnerships, and international accelerator referrals."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "opp-01",
+      "title": "Tashkent Pitch Day — Autumn 2026",
+      "category": "Pitch Days",
+      "type": "events",
+      "date": "October 24, 2026",
+      "location": "Tashkent • C-Space Yunusabad",
+      "status": "Active Intake",
+      "description": "10 curated early-stage teams pitch directly to 15+ angels, operators, and venture partners. 3-min pitch + 5-min live Q&A. Selective — apply early.",
+      "action": "Apply to Pitch",
+      "target": "Pre-seed & Seed Founders",
+      "tag": "Flagship"
+    },
+    {
+      "id": "opp-02",
+      "title": "Samarkand Regional Builder Sprint",
+      "category": "Startup Programs",
+      "type": "programs",
+      "date": "November 8–10, 2026",
+      "location": "Samarkand IT Park",
+      "status": "Registration Open",
+      "description": "48-hour MVP sprint pairing university engineering students with experienced product mentors. Teams form on Day 1 and demo live on Day 3.",
+      "action": "Register Team",
+      "target": "Student & Technical Founders",
+      "tag": "Regional"
+    },
+    {
+      "id": "opp-03",
+      "title": "Founder Talk: Unit Economics in Practice",
+      "category": "Events",
+      "type": "events",
+      "date": "November 19, 2026",
+      "location": "Fergana Digital Center",
+      "status": "RSVP Open",
+      "description": "Candid, off-the-record session on customer acquisition cost, gross margin health, and scaling outside Tashkent. Limited to 40 attendees.",
+      "action": "Reserve Seat",
+      "target": "B2B & Commerce Operators",
+      "tag": "In-Person"
+    },
+    {
+      "id": "opp-04",
+      "title": "Central Asia Venture Bridge Accelerator",
+      "category": "Accelerators",
+      "type": "programs",
+      "date": "Winter Cohort 2026–27",
+      "location": "Tashkent / Almaty (Hybrid)",
+      "status": "Intake Open",
+      "description": "8-week intensive preparing top Central Asian founders for cross-border expansion and US/regional venture rounds. $20K equity-free grant for finalists.",
+      "action": "Apply to Cohort",
+      "target": "Early-Stage Startups",
+      "tag": "Selective"
+    },
+    {
+      "id": "opp-05",
+      "title": "Bukhara Commerce & Tourism Tech Pitch Night",
+      "category": "Pitch Days",
+      "type": "events",
+      "date": "December 4, 2026",
+      "location": "Bukhara Youth Innovation Space",
+      "status": "Upcoming",
+      "description": "Regional spotlight for fintech, hospitality, and trade startups building in Western Uzbekistan. 5 slots available for pitching teams.",
+      "action": "Apply to Pitch",
+      "target": "Regional Startups",
+      "tag": "Pitch Day"
+    },
+    {
+      "id": "opp-06",
+      "title": "1-on-1 Operator Office Hours",
+      "category": "Mentorship",
+      "type": "opportunities",
+      "date": "Rolling — Bi-Weekly",
+      "location": "Virtual / Tashkent HQ",
+      "status": "Available",
+      "description": "Direct 30-minute advisory sessions with vetted technical leads, product heads, and exited founders. Book your slot through our Telegram.",
+      "action": "Book Session",
+      "target": "Community Members",
+      "tag": "High-Signal"
+    },
+    {
+      "id": "opp-07",
+      "title": "University Research & DeepTech Grants",
+      "category": "Research",
+      "type": "opportunities",
+      "date": "Deadline: December 15, 2026",
+      "location": "All 12 Regions",
+      "status": "Open Call",
+      "description": "Grant funding and cloud compute credits for student researchers building deeptech, agritech, and applied AI systems. Up to $5,000 per team.",
+      "action": "Submit Application",
+      "target": "Academic & Student Innovators",
+      "tag": "Grant"
+    },
+    {
+      "id": "opp-08",
+      "title": "Andijan Mobile Founders Meetup",
+      "category": "Events",
+      "type": "events",
+      "date": "December 12, 2026",
+      "location": "Andijan Digital City",
+      "status": "Upcoming",
+      "description": "Informal evening gathering for mobile and consumer product builders in the Andijan area. Demos, networking, and community updates.",
+      "action": "RSVP Free",
+      "target": "Mobile & Consumer Founders",
+      "tag": "Meetup"
+    },
+    {
+      "id": "opp-09",
+      "title": "Open-Source Tooling Initiative",
+      "category": "Community Projects",
+      "type": "opportunities",
+      "date": "Continuous Sprint",
+      "location": "Online / GitHub",
+      "status": "Active Sprints",
+      "description": "Collaborative open-source infrastructure projects built by the community to help local developers. Join any active sprint or propose a new one.",
+      "action": "Contribute Code",
+      "target": "Open-Source Engineers",
+      "tag": "Open Source"
+    },
+    {
+      "id": "opp-10",
+      "title": "Namangan Supply Chain Demo Day",
+      "category": "Pitch Days",
+      "type": "events",
+      "date": "January 15, 2027",
+      "location": "Namangan Tech Park",
+      "status": "Planning",
+      "description": "Dedicated showcase for logistics, supply chain digitization, and e-commerce infrastructure startups from the Fergana Valley corridor.",
+      "action": "Express Interest",
+      "target": "B2B & Logistics Founders",
+      "tag": "Regional"
+    },
+    {
+      "id": "opp-11",
+      "title": "Navoi Industrial IoT Pitch Night",
+      "category": "Pitch Days",
+      "type": "events",
+      "date": "February 2027",
+      "location": "Navoiy Free Tech Zone Hub",
+      "status": "Planning",
+      "description": "Focused on hardware engineering, IoT devices, smart energy systems, and industrial automation prototypes. First edition in the industrial hub.",
+      "action": "Express Interest",
+      "target": "Hardware & IoT Founders",
+      "tag": "Industrial Tech"
+    },
+    {
+      "id": "opp-12",
+      "title": "Ecosystem Leaders Roundtable Q1 2027",
+      "category": "Events",
+      "type": "events",
+      "date": "March 2027",
+      "location": "Tashkent HQ",
+      "status": "Invitation Only",
+      "description": "Quarterly closed-room alignment session for community chapter leads, institutional partners, and lead mentors to shape 2027 programming.",
+      "action": "Nominate Yourself",
+      "target": "Chapter Leads & Partners",
+      "tag": "Leadership"
+    }
+  ],
+
+  "pitchDays": {
+    "headline": "Pitch Days",
+    "subheadline": "Founders don't need to wait for the perfect stage.",
+    "thesis": "Regional Pitch Days bring startup builders together to pitch, receive direct feedback, meet other founders, and access the wider ecosystem.",
+    "format": [
+      {
+        "title": "3-Min Focused Pitch",
+        "description": "No endless slide decks. Founders present problem, solution, early traction, and immediate requirements."
+      },
+      {
+        "title": "5-Min Operator & Investor Q&A",
+        "description": "Unfiltered questions and constructive critique from experienced builders and active angel investors."
+      },
+      {
+        "title": "Direct Ecosystem Connections",
+        "description": "Immediate access to follow-up meetings, pilot introductions, and cohort accelerator fast-tracking."
+      }
+    ],
+    "cities": [
+      {
+        "id": "tashkent",
+        "name": "Tashkent",
+        "region": "Capital Hub",
+        "status": "Upcoming: Oct 24, 2026",
+        "venue": "C-Space Yunusabad",
+        "pastCohorts": 6,
+        "foundersPitched": 48,
+        "investorsPresent": "15+ Angels & Funds",
+        "description": "Flagship capital demo day connecting high-growth software, fintech, and AI ventures with institutional investors.",
+        "coordinates": "41.2995° N, 69.2401° E"
+      },
+      {
+        "id": "samarkand",
+        "name": "Samarkand",
+        "region": "Silk Road Chapter",
+        "status": "Upcoming: Nov 12, 2026",
+        "venue": "Samarkand IT Park Center",
+        "pastCohorts": 3,
+        "foundersPitched": 22,
+        "investorsPresent": "8+ Regional Mentors & Angels",
+        "description": "Showcase of university builders, e-commerce infrastructure, and travel-tech innovations.",
+        "coordinates": "39.6542° N, 66.9597° E"
+      },
+      {
+        "id": "fergana",
+        "name": "Fergana",
+        "region": "Valley Chapter",
+        "status": "Upcoming: Dec 05, 2026",
+        "venue": "Fergana Tech Hub",
+        "pastCohorts": 2,
+        "foundersPitched": 16,
+        "investorsPresent": "6+ AgTech & Trade Angels",
+        "description": "Highlighting B2B supply chain, agricultural technology, and regional marketplace software.",
+        "coordinates": "40.3842° N, 71.7843° E"
+      },
+      {
+        "id": "bukhara",
+        "name": "Bukhara",
+        "region": "Western Chapter",
+        "status": "Scheduled: Dec 18, 2026",
+        "venue": "Bukhara Youth Innovation Space",
+        "pastCohorts": 2,
+        "foundersPitched": 14,
+        "investorsPresent": "5+ Regional Operators",
+        "description": "Dedicated session for creative technologists, EdTech founders, and regional commerce builders.",
+        "coordinates": "39.7681° N, 64.4556° E"
+      },
+      {
+        "id": "navoiy",
+        "name": "Navoi",
+        "region": "Industrial Tech Node",
+        "status": "Planning: Jan 2027",
+        "venue": "Navoiy Free Tech Zone Hub",
+        "pastCohorts": 1,
+        "foundersPitched": 8,
+        "investorsPresent": "4+ Industrial Angels",
+        "description": "Focusing on hardware engineering, IoT, smart energy, and industrial automation prototypes.",
+        "coordinates": "40.0844° N, 65.3792° E"
+      },
+      {
+        "id": "andijan",
+        "name": "Andijan",
+        "region": "Valley Maker Node",
+        "status": "Planning: Feb 2027",
+        "venue": "Andijan Digital City",
+        "pastCohorts": 1,
+        "foundersPitched": 10,
+        "investorsPresent": "5+ Operators & Angels",
+        "description": "Spotlighting mobile product creators, consumer tech, and technical engineering graduates.",
+        "coordinates": "40.7821° N, 72.3442° E"
+      },
+      {
+        "id": "karakalpakstan",
+        "name": "Karakalpakstan (Nukus)",
+        "region": "Aral Sea Innovation Node",
+        "status": "Planning: Spring 2027",
+        "venue": "Nukus IT Park",
+        "pastCohorts": 1,
+        "foundersPitched": 7,
+        "investorsPresent": "Sustainability & Impact Angels",
+        "description": "Green tech, remote software engineering talent, and water sustainability innovations.",
+        "coordinates": "42.4619° N, 59.6166° E"
+      }
+    ]
+  },
+  "communityNetwork": {
+    "headline": "How the Network Connects",
+    "subheadline": "Founders Community creates high-trust connections between groups that normally exist in isolation.",
+    "roles": [
+      {
+        "id": "students",
+        "title": "Students",
+        "badge": "Talent & Creators",
+        "roleDescription": "Ambitious university engineers and student builders seeking real-world projects and co-founders.",
+        "brings": "Fresh technical skills, unconstrained ambition, and high velocity.",
+        "receives": "Direct mentorship, early team formation, hackathon access, and career acceleration.",
+        "connectedTo": ["Founders", "Mentors", "Partners"]
+      },
+      {
+        "id": "founders",
+        "title": "Founders",
+        "badge": "Core Builders",
+        "roleDescription": "First-time and repeat entrepreneurs building technology products from Uzbekistan and Central Asia.",
+        "brings": "Working prototypes, customer insights, and high execution speed.",
+        "receives": "Peer feedback, cap table guidance, investor syndicates, and co-founder matching.",
+        "connectedTo": ["Students", "Mentors", "Investors", "Partners"]
+      },
+      {
+        "id": "mentors",
+        "title": "Mentors",
+        "badge": "Experienced Operators",
+        "roleDescription": "Senior engineers, product leaders, and exited founders giving back hard-won operational lessons.",
+        "brings": "Real failure post-mortems, architectural reviews, and go-to-market strategies.",
+        "receives": "High-signal relationship with rising founders and early advisory opportunities.",
+        "connectedTo": ["Students", "Founders", "Investors"]
+      },
+      {
+        "id": "investors",
+        "title": "Investors",
+        "badge": "Smart Capital",
+        "roleDescription": "Business angels, family offices, and venture capital funds looking for vetted regional deal flow.",
+        "brings": "Pre-seed/seed capital, governance best practices, and international networks.",
+        "receives": "Verified pipeline of high-conviction founders across all 12 regions.",
+        "connectedTo": ["Founders", "Mentors", "Partners"]
+      },
+      {
+        "id": "partners",
+        "title": "Partners",
+        "badge": "Ecosystem Hubs",
+        "roleDescription": "University incubators, tech parks, co-working spaces, and international accelerator programs.",
+        "brings": "Physical infrastructure, regulatory bridges, academic grants, and global pathways.",
+        "receives": "Active grassroots founder density and co-branded regional initiatives.",
+        "connectedTo": ["Students", "Founders", "Investors"]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "tashkent",
+      "name": "Tashkent",
+      "category": "Capital Ecosystem Hub",
+      "foundersCount": 620,
+      "startupsCount": 54,
+      "hubs": ["GroundZero", "C-Space", "IT Park Tashkent", "INHA Innovation Hub"],
+      "description": "The primary density hub hosting regular pitch competitions, VC meetups, and cross-border accelerator cohorts.",
+      "coordinates": { "x": 680, "y": 200 }
+    },
+    {
+      "id": "samarkand",
+      "name": "Samarkand",
+      "category": "Silk Road Regional Hub",
+      "foundersCount": 110,
+      "startupsCount": 14,
+      "hubs": ["Samarkand IT Park", "Silk Road Tech Lab"],
+      "description": "Rapidly expanding university hub with strong focus on software engineering, travel tech, and digital commerce.",
+      "coordinates": { "x": 510, "y": 380 }
+    },
+    {
+      "id": "fergana",
+      "name": "Fergana",
+      "category": "Valley Tech Hub",
+      "foundersCount": 95,
+      "startupsCount": 12,
+      "hubs": ["Fergana Digital Center", "Valley Founders Club"],
+      "description": "Energetic trade and B2B software community connecting founders across the dense Fergana Valley.",
+      "coordinates": { "x": 770, "y": 280 }
+    },
+    {
+      "id": "bukhara",
+      "name": "Bukhara",
+      "category": "Western Innovation Center",
+      "foundersCount": 70,
+      "startupsCount": 8,
+      "hubs": ["Bukhara Youth Innovation Space", "IT Hub Bukhara"],
+      "description": "Active community of creative technologists, EdTech builders, and regional fintech creators.",
+      "coordinates": { "x": 420, "y": 360 }
+    },
+    {
+      "id": "andijan",
+      "name": "Andijan",
+      "category": "Valley Node",
+      "foundersCount": 85,
+      "startupsCount": 9,
+      "hubs": ["Andijan Digital City", "Youth IT Center"],
+      "description": "Fast-paced mobile and hardware engineering community with strong maker culture.",
+      "coordinates": { "x": 840, "y": 250 }
+    },
+    {
+      "id": "namangan",
+      "name": "Namangan",
+      "category": "Commercial Node",
+      "foundersCount": 75,
+      "startupsCount": 7,
+      "hubs": ["Namangan Tech Park", "Commerce Lab"],
+      "description": "Specialized in supply chain tech, light industry digitization, and e-commerce platforms.",
+      "coordinates": { "x": 780, "y": 220 }
+    },
+    {
+      "id": "khorezm",
+      "name": "Khorezm (Urgench)",
+      "category": "Khorezm Oasis Hub",
+      "foundersCount": 45,
+      "startupsCount": 5,
+      "hubs": ["Urgench IT Hub", "Khorezm Tech Academy"],
+      "description": "Rising hub of mathematical and algorithm-focused developers building for global markets.",
+      "coordinates": { "x": 260, "y": 260 }
+    },
+    {
+      "id": "navoiy",
+      "name": "Navoiy",
+      "category": "Industrial Tech Node",
+      "foundersCount": 40,
+      "startupsCount": 4,
+      "hubs": ["Navoiy Free Tech Zone", "Youth Lab"],
+      "description": "Focusing on industrial IoT, clean energy prototypes, and automated systems.",
+      "coordinates": { "x": 430, "y": 290 }
+    },
+    {
+      "id": "kashkadarya",
+      "name": "Kashkadarya (Qarshi)",
+      "category": "Southern Node",
+      "foundersCount": 38,
+      "startupsCount": 3,
+      "hubs": ["Qarshi IT Center", "Agri-Tech Meetup"],
+      "description": "Pioneering youth building smart irrigation, agricultural data tools, and regional marketplaces.",
+      "coordinates": { "x": 480, "y": 450 }
+    },
+    {
+      "id": "surkhandarya",
+      "name": "Surkhandarya (Termez)",
+      "category": "Cross-Border Gateway",
+      "foundersCount": 30,
+      "startupsCount": 3,
+      "hubs": ["Termez Innovation Hub"],
+      "description": "Southern trade-corridor tech initiatives, cross-border logistics, and multi-currency tools.",
+      "coordinates": { "x": 540, "y": 520 }
+    },
+    {
+      "id": "jizzakh",
+      "name": "Jizzakh",
+      "category": "Central Node",
+      "foundersCount": 32,
+      "startupsCount": 3,
+      "hubs": ["Jizzakh IT Park Node"],
+      "description": "Growing hub for mobility tech, university software incubators, and student talent.",
+      "coordinates": { "x": 590, "y": 300 }
+    },
+    {
+      "id": "sirdaryo",
+      "name": "Sirdaryo (Gulistan)",
+      "category": "Agri-Corridor Node",
+      "foundersCount": 25,
+      "startupsCount": 2,
+      "hubs": ["Gulistan Digital Lab"],
+      "description": "Focused on supply chain connectivity and agricultural software validation.",
+      "coordinates": { "x": 640, "y": 260 }
+    },
+    {
+      "id": "karakalpakstan",
+      "name": "Republic of Karakalpakstan (Nukus)",
+      "category": "Aral Sea Innovation Hub",
+      "foundersCount": 35,
+      "startupsCount": 4,
+      "hubs": ["Nukus IT Park", "Green Tech Incubator"],
+      "description": "Dedicated to environmental sustainability, water tech solutions, and young remote engineers.",
+      "coordinates": { "x": 160, "y": 180 }
+    },
+    {
+      "id": "kazakhstan_bridge",
+      "name": "Kazakhstan (Almaty / Astana)",
+      "category": "Central Asia Expansion Node",
+      "foundersCount": 45,
+      "startupsCount": 8,
+      "hubs": ["Astana Hub Partners", "MOST Ventures Network"],
+      "description": "Cross-border founder bridge facilitating joint cohorts, investor introductions, and market expansion.",
+      "coordinates": { "x": 880, "y": 120 }
+    }
+  ],
+  "partners": [
+    {
+      "id": "yoshlar-ventures",
+      "name": "Yoshlar Ventures",
+      "category": "Venture Capital",
+      "role": "Seed & Pre-Seed Partner",
+      "logo": "assets/yoshlar-ventures.png",
+      "url": "https://yoshlarventures.uz",
+      "description": "Early-stage venture fund supporting young high-growth technology founders in Uzbekistan."
+    },
+    {
+      "id": "startup-ambassadors",
+      "name": "Startup Ambassadors",
+      "category": "Ecosystem Network",
+      "role": "Youth Ecosystem Partner",
+      "logo": "assets/startup-ambassadors.png",
+      "url": "https://www.startupambassadors.uz",
+      "description": "National youth startup initiative empowering student creators and university builders across the country."
+    },
+    {
+      "id": "techstars",
+      "name": "Techstars",
+      "category": "Global Accelerator",
+      "role": "Global Ecosystem Bridge",
+      "logo": "assets/techstars-logo.svg",
+      "url": "https://www.techstars.com",
+      "description": "Worldwide network helping startup entrepreneurs succeed through mentorship and accelerator access."
+    },
+    {
+      "id": "it-park",
+      "name": "IT Park Uzbekistan",
+      "category": "Infrastructure",
+      "role": "National IT Infrastructure",
+      "textLogo": "IT Park Uzbekistan",
+      "url": "https://it-park.uz",
+      "description": "Comprehensive IT ecosystem provider offering incubation, tax incentives, and modern tech facilities."
+    },
+    {
+      "id": "c-space",
+      "name": "C-Space",
+      "category": "Innovation Hub",
+      "role": "Community Space Partner",
+      "textLogo": "C-Space",
+      "url": "https://cspace.uz",
+      "description": "Network of premium collaborative workspaces and tech hubs hosting community demo days."
+    },
+    {
+      "id": "uzmihu",
+      "name": "UzMihu / Finance Hub",
+      "category": "Financial Leadership",
+      "role": "Financial Ecosystem Partner",
+      "textLogo": "UzMihu",
+      "url": "https://uzmihu.uz",
+      "description": "Youth financial leadership and economic forum empowering collegiate builders across Uzbekistan."
+    },
+    {
+      "id": "debocha",
+      "name": "Debocha",
+      "category": "EdTech & Talent",
+      "role": "Founder Education Partner",
+      "textLogo": "Debocha",
+      "url": "https://debocha.uz",
+      "description": "Edtech platform and media ecosystem educating the next generation of builders."
+    },
+    {
+      "id": "digital-city",
+      "name": "Digital City",
+      "category": "Regional Hub",
+      "role": "Regional Innovation Node",
+      "textLogo": "Digital City",
+      "url": "https://digitalcity.uz",
+      "description": "Regional technology and incubation campus supporting founders across the Fergana Valley corridor."
+    }
+  ],
+  "stories": [
+    {
+      "id": "story-01",
+      "title": "Building a Modern B2B Supply Chain from Fergana",
+      "slug": "building-supply-chain-fergana",
+      "author": "Azizbek Rahimov",
+      "role": "Co-founder, AgroLink",
+      "date": "August 2026",
+      "location": "Fergana",
+      "readTime": "5 min read",
+      "category": "Founder Stories",
+      "cover": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80",
+      "excerpt": "How three university students in Fergana built a real-time agricultural supply chain platform connecting 400+ regional farmers directly with commercial buyers.",
+      "content": "<p>When we started building in Fergana, the prevailing advice was clear: move to Tashkent immediately or give up. But the problem we were solving—fragmented agricultural logistics and erratic pricing—was happening right in our hometown in the Fergana Valley.</p><h3>The Regional Advantage</h3><p>Being 300 kilometers away from the capital forced us to build with extreme operational discipline. We spent our mornings in cold-storage warehouses and our afternoons writing Python backends. Our first 50 customers were people we met at regional produce terminals.</p><blockquote>\"You don't need a fancy office in the capital to validate customer pain. You need empathy, speed, and relentless follow-through.\"</blockquote><h3>Finding the Network</h3><p>Connecting with Founders Community Uzbekistan gave us access to mentors who helped us structure our first commercial agreements and avoid critical cap-table mistakes. Today, our software processes millions in transactions monthly, and our engineering team remains proud to build from Fergana.</p>"
+    },
+    {
+      "id": "story-02",
+      "title": "Why Central Asia's Next Generation is Choosing Startups Over Corporate Ladders",
+      "slug": "central-asia-youth-entrepreneurship",
+      "author": "Madina Karimova",
+      "role": "Ecosystem Researcher & Community Lead",
+      "date": "July 2026",
+      "location": "Tashkent",
+      "readTime": "7 min read",
+      "category": "Ecosystem Insights",
+      "cover": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80",
+      "excerpt": "An analysis of how demographic dividends, mobile internet penetration, and peer-to-peer founder networks are igniting high-velocity venture building across Uzbekistan.",
+      "content": "<p>Uzbekistan has one of the youngest populations in Eurasia: over 60% of the country is under the age of 30. For decades, the default career aspirational path for top STEM graduates was corporate employment or civil service. That trajectory is undergoing a seismic shift.</p><h3>The Peer Effect</h3><p>When young engineers see peers their own age launch real products that handle thousands of daily transactions, the mental ceiling breaks. Entrepreneurship transitions from an abstract Silicon Valley fairy tale into an accessible craft.</p><h3>Closing the Information Gap</h3><p>The remaining bottleneck has never been talent—it has always been high-density access to operational knowledge: how to run customer interviews, how to write clean convertible notes, how to pitch effectively without corporate buzzwords. That is precisely the infrastructure Founders Community is building brick by brick.</p>"
+    },
+    {
+      "id": "story-03",
+      "title": "From Samarkand Hackathon to Seed Funding: The Path of CodeCraft",
+      "slug": "samarkand-hackathon-to-seed",
+      "author": "Sherzod Alimov",
+      "role": "Founder, CodeCraft AI",
+      "date": "June 2026",
+      "location": "Samarkand",
+      "readTime": "4 min read",
+      "category": "Startup Journeys",
+      "cover": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80",
+      "excerpt": "A weekend prototype built at a regional meetup that grew into an automated compliance tool trusted by fintechs across Central Asia.",
+      "content": "<p>We didn't set out to build a venture-backed company. We just wanted to stop manually reconciling multilingual regulatory filings for local banks. At a Founders Community Samarkand meetup in late 2025, we showed our messy 48-hour prototype to three visiting founders.</p><p>Their blunt feedback was invaluable: strip away 80% of the features and double down on instant document extraction. Six months later, we closed our first pre-seed check and signed contracts with 4 major institutions.</p>"
+    }
+  ],
+  "photos": [
+    {
+      "id": "photo-real-11",
+      "title": "Founders Community Stage Keynote",
+      "category": "Founder Talks",
+      "location": "Tashkent Summit Hall",
+      "date": "2026",
+      "image": "assets/gallery/founders-stage-keynote.jpg",
+      "caption": "Keynote address on ambition, purpose, and startup execution across Central Asia."
+    },
+    {
+      "id": "photo-real-12",
+      "title": "Silk Road Finance & Technology Forum",
+      "category": "Pitch Events",
+      "location": "Tashkent • Silk Road Stage",
+      "date": "2026",
+      "image": "assets/gallery/silk-road-forum.jpg",
+      "caption": "Flagship fintech and technology forum bringing together founders, operators, and ecosystem leaders."
+    },
+    {
+      "id": "photo-real-13",
+      "title": "EasyDMARC Engineering & Architecture Session",
+      "category": "Startup Programs",
+      "location": "Innovation Hub",
+      "date": "2026",
+      "image": "assets/gallery/easydmarc-tech-workshop.jpg",
+      "caption": "Technical infrastructure, scalability, and product teardown workshop."
+    },
+    {
+      "id": "photo-real-14",
+      "title": "Decentralized Founders Regional Call",
+      "category": "Community",
+      "location": "Online • All 12 Regions",
+      "date": "2026",
+      "image": "assets/gallery/virtual-founders-meet.jpg",
+      "caption": "Bi-weekly virtual alignment and mentorship session connecting builders across Uzbekistan."
+    },
+    {
+      "id": "photo-real-15",
+      "title": "Founders Loft & Peer Exchange",
+      "category": "Community",
+      "location": "C-Space Innovation Space",
+      "date": "2026",
+      "image": "assets/gallery/loft-community-meetup.jpg",
+      "caption": "Informal peer mastermind and problem-solving session in a modern collaborative space."
+    },
+    {
+      "id": "photo-real-01",
+      "title": "Founders Community Demo Day & Certificates",
+      "category": "Pitch Events",
+      "location": "Tashkent Hub",
+      "date": "2026",
+      "image": "assets/gallery/founders-certificates.jpg",
+      "caption": "Demo day cohort celebration and certificate presentation for young tech founders."
+    },
+    {
+      "id": "photo-real-02",
+      "title": "Zakovat & NIS Namangan Innovation Session",
+      "category": "Regional Events",
+      "location": "Namangan Tech Space",
+      "date": "2026",
+      "image": "assets/gallery/nis-namangan-zakovat.jpg",
+      "caption": "Regional startup pitch and intellectual tournament session in Namangan."
+    },
+    {
+      "id": "photo-real-03",
+      "title": "NIS AI Maktabi — Startup Pitch & Demo",
+      "category": "Pitch Events",
+      "location": "Tashkent • NIS AI Maktabi",
+      "date": "2026",
+      "image": "assets/gallery/nis-ai-maktabi-pitch.jpg",
+      "caption": "Students and young builders pitching artificial intelligence and tech solutions at NIS AI Maktabi."
+    },
+    {
+      "id": "photo-real-04",
+      "title": "Finance Hub x UZMIHU Forum",
+      "category": "Founder Talks",
+      "location": "Tashkent • Ixtisoslashtirilgan Ta'lim Agentligi",
+      "date": "2026",
+      "image": "assets/gallery/finance-hub-uzmihu.jpg",
+      "caption": "Youth financial leadership and startup ecosystem gathering with Finance Hub and UZMIHU."
+    },
+    {
+      "id": "photo-real-05",
+      "title": "Why Money Matters — Financial Literacy Workshop",
+      "category": "Startup Programs",
+      "location": "Samarkand / Tashkent Hub",
+      "date": "2026",
+      "image": "assets/gallery/why-money-matters-workshop.jpg",
+      "caption": "Interactive financial modeling, venture mechanics, and unit economics workshop for youth founders."
+    },
+    {
+      "id": "photo-real-06",
+      "title": "National Economic Cooperation Working Group",
+      "category": "Regional Events",
+      "location": "Fergana Valley / Regional Hub",
+      "date": "2026",
+      "image": "assets/gallery/economic-cooperation-session.jpg",
+      "caption": "O'zbekiston Milliy Iqtisodiy Hamkorlik Uyushmasi collaborative problem-solving and startup sprint."
+    },
+    {
+      "id": "photo-real-07",
+      "title": "Noldan Milliongacha — Founder Study Cohort",
+      "category": "Startup Programs",
+      "location": "Tashkent Innovation Lab",
+      "date": "2026",
+      "image": "assets/gallery/book-club-founders.jpg",
+      "caption": "Founders intensive study cohort focusing on business foundations and venture growth."
+    },
+    {
+      "id": "photo-real-08",
+      "title": "Regional Builder Assembly",
+      "category": "Community",
+      "location": "Samarkand / Tashkent",
+      "date": "2026",
+      "image": "assets/gallery/community-hall-gathering.jpg",
+      "caption": "Cross-regional assembly of collegiate founders and student organizers."
+    },
+    {
+      "id": "photo-real-09",
+      "title": "Collegiate Founders Stage Briefing",
+      "category": "Founder Talks",
+      "location": "Youth Hub",
+      "date": "2026",
+      "image": "assets/gallery/stage-founders.jpg",
+      "caption": "Collegiate tech builders sharing project roadmaps and team formation."
+    },
+    {
+      "id": "photo-real-10",
+      "title": "Early Stage Pitch Session & Mentorship",
+      "category": "Community",
+      "location": "Community Innovation Space",
+      "date": "2026",
+      "image": "assets/gallery/pitch-presentation.jpg",
+      "caption": "Young founders presenting prototype architecture and receiving feedback from community mentors."
+    },
+    {
+      "id": "photo-real-16",
+      "title": "Mobile Scoring Startup Pitch",
+      "category": "Pitch Events",
+      "location": "Tashkent • Innovation Hall",
+      "date": "2026",
+      "image": "assets/gallery/mobile-scoring-pitch.jpg",
+      "caption": "Young founders pitch a mobile credit-scoring solution — 30-second daily input, AI-powered trust profiles for microfinance access."
+    },
+    {
+      "id": "photo-real-17",
+      "title": "IT Park Urganch — Founders Workshop",
+      "category": "Regional Events",
+      "location": "Urganch • IT Park Urganch Tuman",
+      "date": "2026",
+      "image": "assets/gallery/itpark-urganch-session.jpg",
+      "caption": "Regional tech education session at IT Park Urganch Tuman with aspiring young builders and founders."
+    },
+    {
+      "id": "photo-real-18",
+      "title": "Founders Certificates — Karakalpakstan Cohort",
+      "category": "Community",
+      "location": "Karakalpakstan Hub",
+      "date": "2026",
+      "image": "assets/gallery/founders-certificates-karakalpak.jpg",
+      "caption": "Certificate ceremony for the Karakalpakstan Founders Community cohort — a milestone of growth and commitment."
+    },
+    {
+      "id": "photo-real-19",
+      "title": "Community Founders Listening Session",
+      "category": "Community",
+      "location": "Regional Conference Hall",
+      "date": "2026",
+      "image": "assets/gallery/community-session-audience.jpg",
+      "caption": "Founders and participants engaged in an open dialogue and ecosystem alignment session."
+    },
+    {
+      "id": "photo-real-20",
+      "title": "Startup Pitch Keynote Workshop",
+      "category": "Founder Talks",
+      "location": "Grand Hall",
+      "date": "2026",
+      "image": "assets/gallery/keynote-startup-workshop.jpg",
+      "caption": "Keynote session covering the barriers of entering foreign markets and how founders can build globally from Uzbekistan."
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-01",
+      "caption": "Founders Community Demo Day & Certificates",
+      "subtext": "Tashkent Hub • Pitch Events",
+      "src": "assets/gallery/founders-certificates.jpg",
+      "alt": "Founders Community Demo Day"
+    },
+    {
+      "id": "gal-02",
+      "caption": "Zakovat & NIS Namangan Innovation Session",
+      "subtext": "Namangan • Regional Events",
+      "src": "assets/gallery/nis-namangan-zakovat.jpg",
+      "alt": "Zakovat & NIS Namangan"
+    },
+    {
+      "id": "gal-03",
+      "caption": "NIS AI Maktabi — Startup Pitch & Demo",
+      "subtext": "Tashkent • Pitch Events",
+      "src": "assets/gallery/nis-ai-maktabi-pitch.jpg",
+      "alt": "NIS AI Maktabi Demo"
+    },
+    {
+      "id": "gal-04",
+      "caption": "Finance Hub x UZMIHU Forum",
+      "subtext": "Tashkent • Founder Talks",
+      "src": "assets/gallery/finance-hub-uzmihu.jpg",
+      "alt": "Finance Hub x UZMIHU"
+    },
+    {
+      "id": "gal-05",
+      "caption": "Why Money Matters — Financial Literacy Workshop",
+      "subtext": "Samarkand / Tashkent • Workshops",
+      "src": "assets/gallery/why-money-matters-workshop.jpg",
+      "alt": "Why Money Matters Workshop"
+    },
+    {
+      "id": "gal-06",
+      "caption": "National Economic Cooperation Working Group",
+      "subtext": "Regional Hub • Hackathons",
+      "src": "assets/gallery/economic-cooperation-session.jpg",
+      "alt": "National Economic Cooperation Working Group"
+    },
+    {
+      "id": "gal-07",
+      "caption": "Noldan Milliongacha — Founder Study Cohort",
+      "subtext": "Tashkent • Workshops",
+      "src": "assets/gallery/book-club-founders.jpg",
+      "alt": "Noldan Milliongacha Cohort"
+    },
+    {
+      "id": "gal-08",
+      "caption": "Regional Builder Assembly",
+      "subtext": "Regional Hub • Community",
+      "src": "assets/gallery/community-hall-gathering.jpg",
+      "alt": "Regional Builder Assembly"
+    },
+    {
+      "id": "gal-09",
+      "caption": "Collegiate Founders Stage Briefing",
+      "subtext": "Youth Hub • Founder Talks",
+      "src": "assets/gallery/stage-founders.jpg",
+      "alt": "Collegiate Founders Stage Briefing"
+    },
+    {
+      "id": "gal-10",
+      "caption": "Early Stage Pitch Session & Mentorship",
+      "subtext": "Innovation Space • Community Meetups",
+      "src": "assets/gallery/pitch-presentation.jpg",
+      "alt": "Early Stage Pitch Session"
+    },
+    {
+      "id": "gal-11",
+      "caption": "Mobile Scoring Startup Pitch",
+      "subtext": "Tashkent • Pitch Events",
+      "src": "assets/gallery/mobile-scoring-pitch.jpg",
+      "alt": "Mobile Scoring Startup Pitch"
+    },
+    {
+      "id": "gal-12",
+      "caption": "IT Park Urganch — Founders Workshop",
+      "subtext": "Urganch • Regional Events",
+      "src": "assets/gallery/itpark-urganch-session.jpg",
+      "alt": "IT Park Urganch Founders Workshop"
+    },
+    {
+      "id": "gal-13",
+      "caption": "Founders Certificates — Karakalpakstan",
+      "subtext": "Karakalpakstan • Community",
+      "src": "assets/gallery/founders-certificates-karakalpak.jpg",
+      "alt": "Founders Certificates Karakalpakstan"
+    },
+    {
+      "id": "gal-14",
+      "caption": "Community Founders Listening Session",
+      "subtext": "Regional Hall • Community",
+      "src": "assets/gallery/community-session-audience.jpg",
+      "alt": "Community Founders Listening Session"
+    },
+    {
+      "id": "gal-15",
+      "caption": "Startup Pitch Keynote Workshop",
+      "subtext": "Grand Hall • Founder Talks",
+      "src": "assets/gallery/keynote-startup-workshop.jpg",
+      "alt": "Startup Pitch Keynote Workshop"
+    }
+  ]
+}

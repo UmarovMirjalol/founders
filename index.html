@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founders Community Uzbekistan | Founder Network</title>
+
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="Founders Community Uzbekistan | Founder Network">
+  <meta name="description"
+    content="The independent founder network connecting 1,250+ founders across 12 regions of Uzbekistan.">
+  <meta name="keywords"
+    content="Founders Community Uzbekistan, startup founders, Tashkent startups, Samarkand founders, Fergana Valley builders, Central Asia venture">
+  <meta name="author" content="Founders Community Uzbekistan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://founders.uz/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://founders.uz/">
+  <meta property="og:title" content="Founders Community Uzbekistan">
+  <meta property="og:description"
+    content="Building the next generation of founders across Uzbekistan. 1,250+ founders connected across 12 regions.">
+  <meta property="og:image" content="assets/brand-badge.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/brand-badge.svg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css?v=6.0">
+</head>
+
+<body>
+
+  <!-- Minimal Header -->
+  <header class="header" role="banner">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-link" aria-label="Founders Community">
+        <div class="brand-symbol">
+          <svg width="12" height="12" viewBox="0 0 100 100" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M50 20 C66 20 80 34 80 50 C80 66 66 80 50 80 C34 80 20 66 20 50 C20 34 34 20 50 20 Z M50 34 C50 43 44 50 35 50 C44 50 50 57 50 66 C50 57 56 50 65 50 C56 50 50 43 50 34 Z"
+              fill="#FFFFFF" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Founders Community</span>
+          <span class="brand-subtitle">Uzbekistan</span>
+        </div>
+      </a>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#flow">Network</a></li>
+          <li><a href="#regions">12 Regions</a></li>
+          <li><a href="#what-we-do">What We Do</a></li>
+          <li><a href="#ecosystem">Ecosystem</a></li>
+          <li><a href="#numbers">Numbers</a></li>
+          <li><a href="#archive">Archive</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm trigger-join-modal" id="nav-join-btn">
+          Join the Community
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="#flow">Network</a></li>
+      <li><a href="#regions">12 Regions</a></li>
+      <li><a href="#what-we-do">What We Do</a></li>
+      <li><a href="#ecosystem">Ecosystem</a></li>
+      <li><a href="#numbers">Numbers</a></li>
+      <li><a href="#archive">Archive</a></li>
+    </ul>
+    <div style="margin-top: auto;">
+      <button class="btn btn-primary trigger-join-modal" style="width: 100%;">Join the Community</button>
+    </div>
+  </nav>
+
+  <main id="main-content" role="main">
+
+    <!-- 1. HERO -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-tag">
+            <span class="fc-label">FC / 01 — COMMUNITY</span>
+            <br>
+            <span class="mono-tag signal">FOUNDERS COMMUNITY UZBEKISTAN</span>
+          </div>
+
+          <h1 class="hero-headline reveal">
+            Building the next generation of founders across Uzbekistan.
+          </h1>
+
+          <div class="hero-stat-card reveal reveal-delay-2" id="hero-stat-card">
+            <canvas id="hero-network-canvas" class="hero-network-canvas"></canvas>
+            <div class="hero-stat-content">
+              <span class="hero-stat-number" data-counter-target="1250" data-counter-suffix="+">1,250+</span>
+              <span class="hero-stat-label">FOUNDERS CONNECTED</span>
+              <div class="hero-stat-subtext">
+                <span>12 regions</span>
+                <span>·</span>
+                <span>8+ ecosystem partners</span>
+                <span>·</span>
+                <span>Uzbekistan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-ctas reveal reveal-delay-3">
+            <button class="btn btn-primary btn-lg trigger-join-modal" id="hero-join-cta">
+              Join the Community &rarr;
+            </button>
+            <a href="#regions" class="btn btn-secondary btn-lg">
+              Explore the Network &darr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIONS MARQUEE STRIP -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track" id="marquee-track">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- 2. NETWORK / FLOW -->
+    <section class="flow-section" id="flow">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="fc-label">FC / 02 — NETWORK</span>
+          <h2 class="section-title">How the network connects.</h2>
+          <p class="section-sub">
+            From individual builders to real venture traction across Uzbekistan.
+          </p>
+        </div>
+
+        <div class="flow-track">
+          <!-- Step 1 -->
+          <div class="flow-step reveal">
+            <span class="flow-step-num">01 / STAGE</span>
+            <div class="flow-step-title">FOUNDERS</div>
+            <p class="flow-step-desc">
+              Technical builders, student creators, and ambitious operators across Uzbekistan.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flow-step reveal reveal-delay-1">
+            <span class="flow-step-num">02 / STAGE</span>
+            <div class="flow-step-title">COMMUNITY</div>
+            <p class="flow-step-desc">
+              A high-trust, decentralized ecosystem outside isolated building.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flow-step reveal reveal-delay-2">
+            <span class="flow-step-num">03 / STAGE</span>
+            <div class="flow-step-title">CONNECTIONS</div>
+            <p class="flow-step-desc">
+              Direct introductions to vetted co-founders, experienced mentors, and peers.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flow-step reveal reveal-delay-3">
+            <span class="flow-step-num">04 / STAGE</span>
+            <div class="flow-step-title">OPPORTUNITIES</div>
+            <p class="flow-step-desc">
+              Regional pitch days, builder cohorts, grant calls, and ecosystem pilots.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flow-step reveal reveal-delay-4">
+            <span class="flow-step-num">05 / STAGE</span>
+            <div class="flow-step-title">GROWTH</div>
+            <p class="flow-step-desc">
+              Real ventures launched, capital secured, and cross-border expansion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 12 REGIONS -->
+    <section class="regions-section" id="regions">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="fc-label">FC / 03 — REGIONS</span>
+          <h2 class="section-title">12 Regions &bull; 1,250+ Founders</h2>
+          <p class="section-sub">
+            Talent is everywhere across Uzbekistan. Not only in Tashkent.
+          </p>
+        </div>
+
+        <div class="regions-split">
+          <!-- Left: Map Visualization -->
+          <div class="map-container reveal">
+            <div class="map-header-bar">
+              <span>UZBEKISTAN CHAPTER NETWORK</span>
+              <span>12 REGIONAL NODES</span>
+            </div>
+            <div class="map-svg-wrap" id="map-svg-container">
+              <!-- Rendered via js/map.js -->
+            </div>
+          </div>
+
+          <!-- Right: Chapter Ledger & Active Inspector -->
+          <div class="regions-ledger reveal reveal-delay-2">
+            <ul class="regional-nodes-list" id="regional-nodes-list">
+              <!-- Populated via js/map.js -->
+            </ul>
+
+            <div class="active-region-card" id="region-drawer-content">
+              <!-- Populated on region select -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHAT WE DO -->
+    <section class="what-section" id="what-we-do">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="fc-label">FC / 04 — PILLARS</span>
+          <h2 class="section-title">What we do.</h2>
+          <p class="section-sub">
+            Four core pillars designed to eliminate bottlenecks for early-stage builders.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-item reveal">
+            <span class="pillar-num">01 / CONNECT</span>
+            <div class="pillar-title">Connect</div>
+            <p class="pillar-desc">
+              Connect founders across all 12 regions, technical disciplines, and backgrounds.
+            </p>
+          </div>
+
+          <div class="pillar-item reveal reveal-delay-1">
+            <span class="pillar-num">02 / BUILD</span>
+            <div class="pillar-title">Build</div>
+            <p class="pillar-desc">
+              Create real opportunities, builder cohorts, MVPs, and startup collaborations.
+            </p>
+          </div>
+
+          <div class="pillar-item reveal reveal-delay-2">
+            <span class="pillar-num">03 / LEARN</span>
+            <div class="pillar-title">Learn</div>
+            <p class="pillar-desc">
+              Share direct operator knowledge through pitch days, mentors, and masterclasses.
+            </p>
+          </div>
+
+          <div class="pillar-item reveal reveal-delay-3">
+            <span class="pillar-num">04 / GROW</span>
+            <div class="pillar-title">Grow</div>
+            <p class="pillar-desc">
+              Help founders access the early-stage capital, pilot partners, and people they need.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ECOSYSTEM -->
+    <section class="ecosystem-section" id="ecosystem">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="fc-label">FC / 05 — ECOSYSTEM</span>
+          <h2 class="section-title">8+ Ecosystem Partners.</h2>
+          <p class="section-sub">
+            Collaborating with active venture funds, tech hubs, and accelerators.
+          </p>
+        </div>
+
+        <div class="partners-grid" id="partners-wall">
+          <!-- Rendered dynamically via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. COMMUNITY NUMBERS -->
+    <section class="numbers-section" id="numbers">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="fc-label fc-label-dark">FC / 06 — NUMBERS</span>
+          <h2 class="section-title" style="color: #FFFFFF;">Community numbers.</h2>
+          <p class="section-sub" style="color: var(--text-inverted-muted);">
+            Real network scale across Uzbekistan and Central Asia.
+          </p>
+        </div>
+
+        <div class="numbers-grid">
+          <div class="number-item reveal">
+            <div class="number-val" data-counter-target="1250" data-counter-suffix="+">1,250+</div>
+            <div class="number-label">Founders connected</div>
+            <div class="number-sub">Active builders &amp; creators</div>
+          </div>
+
+          <div class="number-item reveal reveal-delay-1">
+            <div class="number-val" data-counter-target="12" data-counter-suffix="">12</div>
+            <div class="number-label">Regions</div>
+            <div class="number-sub">Chapters across Uzbekistan</div>
+          </div>
+
+          <div class="number-item reveal reveal-delay-2">
+            <div class="number-val" data-counter-target="8" data-counter-suffix="+">8+</div>
+            <div class="number-label">Ecosystem partners</div>
+            <div class="number-sub">Funds, hubs &amp; accelerators</div>
+          </div>
+
+          <div class="number-item reveal reveal-delay-3">
+            <div class="number-val" data-counter-target="20" data-counter-suffix="+">20+</div>
+            <div class="number-label">Community events</div>
+            <div class="number-sub">Pitch days, talks &amp; cohorts</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. DOCUMENTARY ARCHIVE -->
+    <section class="gallery-section" id="archive">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="fc-label">FC / 07 — ARCHIVE</span>
+          <h2 class="section-title">Real gatherings, real founders.</h2>
+          <p class="section-sub">
+            Photographs from pitch days, founder talks, and community gatherings across Uzbekistan.
+          </p>
+        </div>
+
+        <div class="gallery-filter-bar" id="gallery-filter-bar">
+          <button class="filter-pill active" data-gallery-filter="all">All Gatherings</button>
+          <button class="filter-pill" data-gallery-filter="Pitch Events">Pitch Events</button>
+          <button class="filter-pill" data-gallery-filter="Founder Talks">Founder Talks</button>
+          <button class="filter-pill" data-gallery-filter="Regional Events">Regional Events</button>
+          <button class="filter-pill" data-gallery-filter="Community">Meetups</button>
+          <button class="filter-pill" data-gallery-filter="Startup Programs">Workshops</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Populated dynamically via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section class="cta-section" id="join">
+      <div class="container">
+        <div class="cta-wrap">
+          <span class="mono-tag signal">GET CONNECTED</span>
+          <h2 class="cta-quote reveal">
+            "Your next connection could change what you build."
+          </h2>
+          <div class="reveal reveal-delay-2">
+            <button class="btn btn-primary btn-lg trigger-join-modal">
+              Join Founders Community &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — Brand Statement -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-wordmark">
+        <span class="footer-wordmark-line">FOUNDERS</span>
+        <span class="footer-wordmark-line">COMMUNITY</span>
+      </div>
+
+      <div class="footer-stats-bar">
+        <div class="footer-stat">
+          <span class="footer-stat-val">1,250+</span>
+          <span class="footer-stat-label">Founders</span>
+        </div>
+        <div class="footer-stat-sep"></div>
+        <div class="footer-stat">
+          <span class="footer-stat-val">12</span>
+          <span class="footer-stat-label">Regions</span>
+        </div>
+        <div class="footer-stat-sep"></div>
+        <div class="footer-stat">
+          <span class="footer-stat-val">8+</span>
+          <span class="footer-stat-label">Partners</span>
+        </div>
+      </div>
+
+      <div class="footer-cta-row">
+        <button class="btn btn-primary btn-lg trigger-join-modal">
+          Join the Community &rarr;
+        </button>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-row">
+        <ul class="footer-links">
+          <li><a href="https://t.me/foundersuz" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li><a href="https://www.linkedin.com/company/founders-community-uz" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://instagram.com/founders.uz" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="mailto:contact@founders.uz">contact@founders.uz</a></li>
+        </ul>
+        <span class="footer-copy">&copy; 2026 Founders Community Uzbekistan</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FOUNDER APPLICATION DOSSIER MODAL -->
+  <div class="modal-overlay" id="join-modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="mono-tag signal">MEMBERSHIP INTAKE</span>
+          <h3 id="join-modal-title" style="font-size: 1.25rem; font-weight: 700; margin-top: 0.25rem;">
+            Join Founders Community
+          </h3>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.25rem;">
+            Connecting ambitious builders, mentors, and early-stage capital across Uzbekistan.
+          </p>
+        </div>
+        <button class="modal-close-btn" id="join-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="join-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="join-name">Full Name *</label>
+              <input type="text" class="form-input" id="join-name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="join-email">Email *</label>
+              <input type="email" class="form-input" id="join-email" placeholder="name@domain.uz" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="join-telegram">Telegram / Phone *</label>
+              <input type="text" class="form-input" id="join-telegram" placeholder="@username or +998..." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="join-role">Primary Role *</label>
+              <select class="form-select" id="join-role" required>
+                <option value="founder">Founder / Product Builder</option>
+                <option value="student">Student Engineer / Creator</option>
+                <option value="mentor">Operator / Mentor</option>
+                <option value="investor">Angel Investor / Partner</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="join-location">Region *</label>
+              <select class="form-select" id="join-location" required>
+                <option value="Tashkent">Tashkent</option>
+                <option value="Samarkand">Samarkand</option>
+                <option value="Fergana">Fergana</option>
+                <option value="Bukhara">Bukhara</option>
+                <option value="Navoi">Navoi</option>
+                <option value="Andijan">Andijan</option>
+                <option value="Namangan">Namangan</option>
+                <option value="Khorezm">Khorezm</option>
+                <option value="Kashkadarya">Kashkadarya</option>
+                <option value="Surkhandarya">Surkhandarya</option>
+                <option value="Jizzakh">Jizzakh</option>
+                <option value="Sirdaryo">Sirdaryo</option>
+                <option value="Karakalpakstan">Karakalpakstan</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="join-startup">Project / Startup Name</label>
+              <input type="text" class="form-input" id="join-startup" placeholder="Project Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="join-notes">What are you building? *</label>
+            <textarea class="form-textarea" id="join-notes" rows="3"
+              placeholder="What are you building and what support/connections do you need?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Submit Application &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Application Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

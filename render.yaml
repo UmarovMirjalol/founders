@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: founders-community
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
+      - key: UPLOADS_DIR
+        value: /opt/render/project/src/uploads
+    disk:
+      name: founders-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
