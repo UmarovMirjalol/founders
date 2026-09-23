@@ -26,18 +26,37 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Paths
+# Paths — detect serverless (Vercel) vs local
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.environ.get("DATA_DIR", os.path.join(BASE_DIR, "data"))
-UPLOADS_DIR = os.environ.get("UPLOADS_DIR", os.path.join(BASE_DIR, "uploads"))
+IS_SERVERLESS = bool(os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"))
+
+if IS_SERVERLESS:
+    # Vercel: /var/task is read-only, use /tmp for writable data
+    _TMP_DATA = "/tmp/founders_data"
+    _TMP_UPLOADS = "/tmp/founders_uploads"
+    os.makedirs(_TMP_DATA, exist_ok=True)
+    os.makedirs(_TMP_UPLOADS, exist_ok=True)
+    DATA_DIR = os.environ.get("DATA_DIR", _TMP_DATA)
+    UPLOADS_DIR = os.environ.get("UPLOADS_DIR", _TMP_UPLOADS)
+    # Copy seed JSON to /tmp so SQLite seeding can read it
+    _src_json = os.path.join(BASE_DIR, "data", "community.json")
+    _dst_json = os.path.join(DATA_DIR, "community.json")
+    if os.path.exists(_src_json) and not os.path.exists(_dst_json):
+        import shutil as _sh
+        _sh.copy2(_src_json, _dst_json)
+else:
+    # Local dev: use project directories
+    DATA_DIR = os.environ.get("DATA_DIR", os.path.join(BASE_DIR, "data"))
+    UPLOADS_DIR = os.environ.get("UPLOADS_DIR", os.path.join(BASE_DIR, "uploads"))
+    os.makedirs(DATA_DIR, exist_ok=True)
+    os.makedirs(UPLOADS_DIR, exist_ok=True)
+
 DB_PATH = os.path.join(DATA_DIR, "founders.db")
 SEED_JSON_PATH = os.path.join(DATA_DIR, "community.json")
 
-os.makedirs(DATA_DIR, exist_ok=True)
-os.makedirs(UPLOADS_DIR, exist_ok=True)
-
-# Mount uploaded media
-app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
+# Mount uploaded media — only if directory exists
+if os.path.isdir(UPLOADS_DIR):
+    app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
 
 # --- In-Memory Auth Session Store ---
 SESSIONS: Dict[str, str] = {}  # token -> username
@@ -68,6 +87,10 @@ def load_community_json() -> Dict[str, Any]:
     return {}
 
 def save_community_json(data: Dict[str, Any]):
+    if IS_SERVERLESS:
+        # On serverless, /tmp writes are ephemeral — skip JSON persistence
+        print("[JSON] Skipping save — serverless environment (ephemeral /tmp)")
+        return
     try:
         with open(SEED_JSON_PATH, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
@@ -934,14 +957,28 @@ def delete_opportunity(opp_id: str, username: str = Depends(verify_token)):
 # Serve root index.html and static files
 @app.get("/")
 def read_root():
-    return FileResponse(os.path.join(BASE_DIR, "index.html"))
+    index_path = os.path.join(BASE_DIR, "index.html")
+    return FileResponse(index_path, media_type="text/html")
 
 @app.get("/admin")
 @app.get("/admin.html")
 def read_admin():
-    return FileResponse(os.path.join(BASE_DIR, "admin.html"))
+    return FileResponse(os.path.join(BASE_DIR, "admin.html"), media_type="text/html")
 
-# Catch-all static files handler
+# Serve community.json from the original data dir on serverless
+# (since the /tmp copy is for SQLite seeding only)
+@app.get("/data/{filename:path}")
+def serve_data_file(filename: str):
+    # Try the original bundled data first, then /tmp
+    path = os.path.join(BASE_DIR, "data", filename)
+    if not os.path.exists(path):
+        path = os.path.join(DATA_DIR, filename)
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Data file not found")
+    media = "application/json" if filename.endswith(".json") else "application/octet-stream"
+    return FileResponse(path, media_type=media)
+
+# Catch-all static files handler — serves js/, styles/, assets/ from project root
 app.mount("/", StaticFiles(directory=BASE_DIR, html=True), name="static")
 
 if __name__ == "__main__":
