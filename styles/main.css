@@ -297,40 +297,32 @@ button {
   gap: 0.625rem;
 }
 
-.brand-symbol {
-  width: 24px;
-  height: 24px;
-  background-color: var(--bg-dark);
-  border-radius: 6px;
+.brand-logo-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: transform var(--transition-smooth), background-color var(--transition-smooth);
+  background: #F07000;
+  border-radius: 8px;
+  padding: 4px 8px;
+  transition: opacity var(--transition-fast);
 }
 
-.brand-link:hover .brand-symbol {
-  background-color: var(--accent-signal);
-  transform: rotate(5deg);
+.brand-link:hover .brand-logo-wrap {
+  opacity: 0.88;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
+.brand-logo-img {
+  height: 20px;
+  width: auto;
+  display: block;
 }
 
-.brand-title {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
-  line-height: 1.15;
-}
-
-.brand-subtitle {
+.brand-subtitle-nav {
   font-family: var(--font-mono);
   font-size: 0.625rem;
   color: var(--text-tertiary);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-left: 0.125rem;
 }
 
 .nav-links {
@@ -1168,18 +1160,23 @@ button {
   margin-bottom: 2.5rem;
 }
 
-.footer-wordmark-line {
+.footer-logo-img {
+  height: clamp(2.5rem, 5vw, 4rem);
+  width: auto;
+  display: block;
+  /* Show logo naturally — it has an orange bg that works on dark footer */
+  border-radius: 8px;
+}
+
+.footer-wordmark-sub {
   display: block;
   font-family: var(--font-sans);
-  font-size: clamp(3rem, 7.5vw, 6.25rem);
+  font-size: clamp(2rem, 5vw, 3.75rem);
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.9;
-  color: #FFFFFF;
-}
-
-.footer-wordmark-line:last-child {
-  color: rgba(251, 251, 250, 0.22);
+  color: rgba(251, 251, 250, 0.18);
+  margin-top: 0.5rem;
 }
 
 .footer-stats-bar {
