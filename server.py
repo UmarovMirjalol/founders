@@ -313,7 +313,7 @@ def seed_data_if_empty(conn: sqlite3.Connection):
         for idx, city in enumerate(pitch_cities):
             event_id = f"evt-{city['id']}"
             cursor.execute("""
-                INSERT INTO events (id, title, date_time, location, category, description, registration_link, published, order_index)
+                INSERT OR REPLACE INTO events (id, title, date_time, location, category, description, registration_link, published, order_index)
                 VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?)
             """, (
                 event_id,
@@ -329,7 +329,7 @@ def seed_data_if_empty(conn: sqlite3.Connection):
         stories = data.get("stories", [])
         for idx, story in enumerate(stories):
             cursor.execute("""
-                INSERT INTO stories (id, title, slug, author, role, date_text, publication_date, location, read_time, category, cover, excerpt, content, extra_images, published)
+                INSERT OR REPLACE INTO stories (id, title, slug, author, role, date_text, publication_date, location, read_time, category, cover, excerpt, content, extra_images, published)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
             """, (
                 story.get("id", f"story-{idx}"),
@@ -351,7 +351,7 @@ def seed_data_if_empty(conn: sqlite3.Connection):
         partners = data.get("partners", [])
         for idx, p in enumerate(partners):
             cursor.execute("""
-                INSERT INTO partners (id, name, category, role, logo, text_logo, url, description, published, order_index)
+                INSERT OR REPLACE INTO partners (id, name, category, role, logo, text_logo, url, description, published, order_index)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?)
             """, (
                 p.get("id", f"partner-{idx}"),
@@ -368,7 +368,7 @@ def seed_data_if_empty(conn: sqlite3.Connection):
         opportunities = data.get("opportunities", [])
         for idx, opp in enumerate(opportunities):
             cursor.execute("""
-                INSERT INTO opportunities (id, title, category, type, date_text, deadline, location, status, description, action_text, target, tag, external_link, published, order_index)
+                INSERT OR REPLACE INTO opportunities (id, title, category, type, date_text, deadline, location, status, description, action_text, target, tag, external_link, published, order_index)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?)
             """, (
                 opp.get("id", f"opp-{idx}"),
