@@ -980,10 +980,46 @@ def serve_data_file(filename: str):
 
 @app.get("/favicon.ico")
 def serve_favicon():
-    p = os.path.join(BASE_DIR, "assets", "founders-logo.png")
+    p = os.path.join(BASE_DIR, "favicon.ico")
+    if not os.path.exists(p):
+        p = os.path.join(BASE_DIR, "assets", "favicon.ico")
+    if not os.path.exists(p):
+        p = os.path.join(BASE_DIR, "assets", "founders-logo.png")
+    if os.path.exists(p):
+        media = "image/x-icon" if p.endswith(".ico") else "image/png"
+        return FileResponse(p, media_type=media)
+    raise HTTPException(status_code=404)
+
+@app.get("/site.webmanifest")
+def serve_manifest():
+    p = os.path.join(BASE_DIR, "site.webmanifest")
+    if os.path.exists(p):
+        return FileResponse(p, media_type="application/manifest+json")
+    raise HTTPException(status_code=404)
+
+@app.get("/apple-touch-icon.png")
+@app.get("/apple-touch-icon-precomposed.png")
+def serve_apple_touch_icon():
+    p = os.path.join(BASE_DIR, "apple-touch-icon.png")
+    if not os.path.exists(p):
+        p = os.path.join(BASE_DIR, "assets", "apple-touch-icon.png")
     if os.path.exists(p):
         return FileResponse(p, media_type="image/png")
     raise HTTPException(status_code=404)
+
+@app.get("/sitemap.xml")
+def serve_sitemap():
+    p = os.path.join(BASE_DIR, "sitemap.xml")
+    if os.path.exists(p):
+        return FileResponse(p, media_type="application/xml")
+    raise HTTPException(status_code=404, detail="Sitemap not found")
+
+@app.get("/robots.txt")
+def serve_robots():
+    p = os.path.join(BASE_DIR, "robots.txt")
+    if os.path.exists(p):
+        return FileResponse(p, media_type="text/plain")
+    raise HTTPException(status_code=404, detail="Robots.txt not found")
 
 # Explicit static mounts for assets, styles, and js
 for folder in ["styles", "js", "assets"]:
