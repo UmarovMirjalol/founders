@@ -908,7 +908,7 @@ button {
 
 .numbers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
   border-top: 1px solid var(--border-dark);
   padding-top: 3rem;
@@ -931,7 +931,7 @@ button {
 }
 
 .number-val {
-  font-size: clamp(3rem, 6vw, 4.75rem);
+  font-size: clamp(2.5rem, 4.5vw, 4.25rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   color: #FFFFFF;
@@ -1246,6 +1246,16 @@ button {
   border-color: #FFFFFF;
   color: var(--bg-dark);
   box-shadow: 0 6px 24px rgba(255, 255, 255, 0.1);
+}
+
+.footer-cta-row .btn-secondary {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-cta-row .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .footer-divider {
