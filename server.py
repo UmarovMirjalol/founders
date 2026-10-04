@@ -1021,6 +1021,15 @@ def serve_robots():
         return FileResponse(p, media_type="text/plain")
     raise HTTPException(status_code=404, detail="Robots.txt not found")
 
+@app.get("/staff")
+@app.get("/team")
+@app.get("/staff.html")
+def serve_staff_page():
+    p = os.path.join(BASE_DIR, "staff.html")
+    if os.path.exists(p):
+        return FileResponse(p, media_type="text/html")
+    raise HTTPException(status_code=404, detail="Staff page not found")
+
 # Explicit static mounts for assets, styles, and js
 for folder in ["styles", "js", "assets"]:
     folder_path = os.path.join(BASE_DIR, folder)
