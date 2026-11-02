@@ -1,7 +1,7 @@
 /**
  * Founders Community Living Network Engine
  * Renders an organic, subtle network of founder nodes and connections
- * symbolizing 1,250+ founders connected across 12 regions of Uzbekistan.
+ * symbolizing 1,500+ founders connected across 12 regions of Uzbekistan.
  *
  * Design intent: human, regional, calm — not AI/sci-fi.
  * Nodes drift slowly. Connections form and fade organically.

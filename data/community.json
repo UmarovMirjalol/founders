@@ -1,29 +1,34 @@
 {
   "stats": [
     {
-      "value": "1,250+",
+      "value": "1,500+",
       "label": "Founders connected",
-      "subtext": "Active technical builders, student creators & operators"
+      "subtext": "Reached 1,500+ founders across all 12 Uzbek regions"
     },
     {
       "value": "100+",
-      "label": "Staff members",
-      "subtext": "Active team members across 12 regions"
+      "label": "Team members",
+      "subtext": "Grew nationwide team to 100+ across 12 regions"
+    },
+    {
+      "value": "120",
+      "label": "Teams to MVP",
+      "subtext": "Accelerator cohort — 120 teams taken to MVP"
+    },
+    {
+      "value": "50",
+      "label": "Startups launched",
+      "subtext": "50 accelerator startups successfully launched into market"
     },
     {
       "value": "12",
-      "label": "Regions",
-      "subtext": "Active chapters across Uzbekistan & Central Asia"
+      "label": "Uzbek regions",
+      "subtext": "Active regional chapters across Uzbekistan"
     },
     {
       "value": "8+",
       "label": "Ecosystem partners",
-      "subtext": "Venture funds, innovation hubs & global bridges"
-    },
-    {
-      "value": "20+",
-      "label": "Community events",
-      "subtext": "Regional pitch days, founder talks & cohorts"
+      "subtext": "Venture funds, hubs & Silk Road Forum (6,000+ attendees)"
     }
   ],
   "howItWorks": [
@@ -33,7 +38,12 @@
       "title": "Discover",
       "subtitle": "Find events, startup programs, opportunities, and people.",
       "summary": "Uncover live ecosystem activities across all 12 regions, from hackathons and pitch days to grant opportunities and high-signal research dispatches.",
-      "tags": ["Events Calendar", "Grant Radar", "Regional Dispatches", "Talent Directory"],
+      "tags": [
+        "Events Calendar",
+        "Grant Radar",
+        "Regional Dispatches",
+        "Talent Directory"
+      ],
       "deliverables": "Get curated weekly intelligence on open cohorts, funding calls, and founder meetups across Uzbekistan and Central Asia."
     },
     {
@@ -42,7 +52,12 @@
       "title": "Connect",
       "subtitle": "Meet founders, builders, mentors, investors, and ecosystem partners.",
       "summary": "Break out of isolated building. Connect directly with vetted co-founders, experienced technical operators, and regional angel investors.",
-      "tags": ["1-on-1 Office Hours", "Peer Masterminds", "Investor Introductions", "Alumni Network"],
+      "tags": [
+        "1-on-1 Office Hours",
+        "Peer Masterminds",
+        "Investor Introductions",
+        "Alumni Network"
+      ],
       "deliverables": "Direct access to our verified directory of founders, engineering mentors, and early-stage capital allocators."
     },
     {
@@ -51,7 +66,12 @@
       "title": "Build",
       "subtitle": "Join events, accelerators, projects, and startup initiatives.",
       "summary": "Test early prototypes in high-velocity cohorts. Receive rigorous operator critique, build MVPs, and validate real customer demand.",
-      "tags": ["Pitch Cohorts", "Hack Sprints", "Product Tear-Downs", "Legal & Cap Table Prep"],
+      "tags": [
+        "Pitch Cohorts",
+        "Hack Sprints",
+        "Product Tear-Downs",
+        "Legal & Cap Table Prep"
+      ],
       "deliverables": "Structured 8-week validation sprints, customer discovery frameworks, and technical architecture reviews."
     },
     {
@@ -60,7 +80,12 @@
       "title": "Grow",
       "subtitle": "Turn connections into partnerships, teams, investment opportunities, and real ventures.",
       "summary": "Scale beyond local borders. Secure pre-seed/seed capital, recruit elite student engineers, and expand into Central Asian & global markets.",
-      "tags": ["Demo Day Access", "Cross-Border Expansion", "Follow-on Capital", "Ecosystem Pilots"],
+      "tags": [
+        "Demo Day Access",
+        "Cross-Border Expansion",
+        "Follow-on Capital",
+        "Ecosystem Pilots"
+      ],
       "deliverables": "Institutional introductions to VC funds, cross-border pilot partnerships, and international accelerator referrals."
     }
   ],
@@ -222,7 +247,6 @@
       "tag": "Leadership"
     }
   ],
-
   "pitchDays": {
     "headline": "Pitch Days",
     "subheadline": "Founders don't need to wait for the perfect stage.",
@@ -339,7 +363,11 @@
         "roleDescription": "Ambitious university engineers and student builders seeking real-world projects and co-founders.",
         "brings": "Fresh technical skills, unconstrained ambition, and high velocity.",
         "receives": "Direct mentorship, early team formation, hackathon access, and career acceleration.",
-        "connectedTo": ["Founders", "Mentors", "Partners"]
+        "connectedTo": [
+          "Founders",
+          "Mentors",
+          "Partners"
+        ]
       },
       {
         "id": "founders",
@@ -348,7 +376,12 @@
         "roleDescription": "First-time and repeat entrepreneurs building technology products from Uzbekistan and Central Asia.",
         "brings": "Working prototypes, customer insights, and high execution speed.",
         "receives": "Peer feedback, cap table guidance, investor syndicates, and co-founder matching.",
-        "connectedTo": ["Students", "Mentors", "Investors", "Partners"]
+        "connectedTo": [
+          "Students",
+          "Mentors",
+          "Investors",
+          "Partners"
+        ]
       },
       {
         "id": "mentors",
@@ -357,7 +390,11 @@
         "roleDescription": "Senior engineers, product leaders, and exited founders giving back hard-won operational lessons.",
         "brings": "Real failure post-mortems, architectural reviews, and go-to-market strategies.",
         "receives": "High-signal relationship with rising founders and early advisory opportunities.",
-        "connectedTo": ["Students", "Founders", "Investors"]
+        "connectedTo": [
+          "Students",
+          "Founders",
+          "Investors"
+        ]
       },
       {
         "id": "investors",
@@ -366,7 +403,11 @@
         "roleDescription": "Business angels, family offices, and venture capital funds looking for vetted regional deal flow.",
         "brings": "Pre-seed/seed capital, governance best practices, and international networks.",
         "receives": "Verified pipeline of high-conviction founders across all 12 regions.",
-        "connectedTo": ["Founders", "Mentors", "Partners"]
+        "connectedTo": [
+          "Founders",
+          "Mentors",
+          "Partners"
+        ]
       },
       {
         "id": "partners",
@@ -375,7 +416,11 @@
         "roleDescription": "University incubators, tech parks, co-working spaces, and international accelerator programs.",
         "brings": "Physical infrastructure, regulatory bridges, academic grants, and global pathways.",
         "receives": "Active grassroots founder density and co-branded regional initiatives.",
-        "connectedTo": ["Students", "Founders", "Investors"]
+        "connectedTo": [
+          "Students",
+          "Founders",
+          "Investors"
+        ]
       }
     ]
   },
@@ -386,9 +431,17 @@
       "category": "Capital Ecosystem Hub",
       "foundersCount": 620,
       "startupsCount": 54,
-      "hubs": ["GroundZero", "C-Space", "IT Park Tashkent", "INHA Innovation Hub"],
+      "hubs": [
+        "GroundZero",
+        "C-Space",
+        "IT Park Tashkent",
+        "INHA Innovation Hub"
+      ],
       "description": "The primary density hub hosting regular pitch competitions, VC meetups, and cross-border accelerator cohorts.",
-      "coordinates": { "x": 680, "y": 200 }
+      "coordinates": {
+        "x": 680,
+        "y": 200
+      }
     },
     {
       "id": "samarkand",
@@ -396,9 +449,15 @@
       "category": "Silk Road Regional Hub",
       "foundersCount": 110,
       "startupsCount": 14,
-      "hubs": ["Samarkand IT Park", "Silk Road Tech Lab"],
+      "hubs": [
+        "Samarkand IT Park",
+        "Silk Road Tech Lab"
+      ],
       "description": "Rapidly expanding university hub with strong focus on software engineering, travel tech, and digital commerce.",
-      "coordinates": { "x": 510, "y": 380 }
+      "coordinates": {
+        "x": 510,
+        "y": 380
+      }
     },
     {
       "id": "fergana",
@@ -406,9 +465,15 @@
       "category": "Valley Tech Hub",
       "foundersCount": 95,
       "startupsCount": 12,
-      "hubs": ["Fergana Digital Center", "Valley Founders Club"],
+      "hubs": [
+        "Fergana Digital Center",
+        "Valley Founders Club"
+      ],
       "description": "Energetic trade and B2B software community connecting founders across the dense Fergana Valley.",
-      "coordinates": { "x": 770, "y": 280 }
+      "coordinates": {
+        "x": 770,
+        "y": 280
+      }
     },
     {
       "id": "bukhara",
@@ -416,9 +481,15 @@
       "category": "Western Innovation Center",
       "foundersCount": 70,
       "startupsCount": 8,
-      "hubs": ["Bukhara Youth Innovation Space", "IT Hub Bukhara"],
+      "hubs": [
+        "Bukhara Youth Innovation Space",
+        "IT Hub Bukhara"
+      ],
       "description": "Active community of creative technologists, EdTech builders, and regional fintech creators.",
-      "coordinates": { "x": 420, "y": 360 }
+      "coordinates": {
+        "x": 420,
+        "y": 360
+      }
     },
     {
       "id": "andijan",
@@ -426,9 +497,15 @@
       "category": "Valley Node",
       "foundersCount": 85,
       "startupsCount": 9,
-      "hubs": ["Andijan Digital City", "Youth IT Center"],
+      "hubs": [
+        "Andijan Digital City",
+        "Youth IT Center"
+      ],
       "description": "Fast-paced mobile and hardware engineering community with strong maker culture.",
-      "coordinates": { "x": 840, "y": 250 }
+      "coordinates": {
+        "x": 840,
+        "y": 250
+      }
     },
     {
       "id": "namangan",
@@ -436,9 +513,15 @@
       "category": "Commercial Node",
       "foundersCount": 75,
       "startupsCount": 7,
-      "hubs": ["Namangan Tech Park", "Commerce Lab"],
+      "hubs": [
+        "Namangan Tech Park",
+        "Commerce Lab"
+      ],
       "description": "Specialized in supply chain tech, light industry digitization, and e-commerce platforms.",
-      "coordinates": { "x": 780, "y": 220 }
+      "coordinates": {
+        "x": 780,
+        "y": 220
+      }
     },
     {
       "id": "khorezm",
@@ -446,9 +529,15 @@
       "category": "Khorezm Oasis Hub",
       "foundersCount": 45,
       "startupsCount": 5,
-      "hubs": ["Urgench IT Hub", "Khorezm Tech Academy"],
+      "hubs": [
+        "Urgench IT Hub",
+        "Khorezm Tech Academy"
+      ],
       "description": "Rising hub of mathematical and algorithm-focused developers building for global markets.",
-      "coordinates": { "x": 260, "y": 260 }
+      "coordinates": {
+        "x": 260,
+        "y": 260
+      }
     },
     {
       "id": "navoiy",
@@ -456,9 +545,15 @@
       "category": "Industrial Tech Node",
       "foundersCount": 40,
       "startupsCount": 4,
-      "hubs": ["Navoiy Free Tech Zone", "Youth Lab"],
+      "hubs": [
+        "Navoiy Free Tech Zone",
+        "Youth Lab"
+      ],
       "description": "Focusing on industrial IoT, clean energy prototypes, and automated systems.",
-      "coordinates": { "x": 430, "y": 290 }
+      "coordinates": {
+        "x": 430,
+        "y": 290
+      }
     },
     {
       "id": "kashkadarya",
@@ -466,9 +561,15 @@
       "category": "Southern Node",
       "foundersCount": 38,
       "startupsCount": 3,
-      "hubs": ["Qarshi IT Center", "Agri-Tech Meetup"],
+      "hubs": [
+        "Qarshi IT Center",
+        "Agri-Tech Meetup"
+      ],
       "description": "Pioneering youth building smart irrigation, agricultural data tools, and regional marketplaces.",
-      "coordinates": { "x": 480, "y": 450 }
+      "coordinates": {
+        "x": 480,
+        "y": 450
+      }
     },
     {
       "id": "surkhandarya",
@@ -476,9 +577,14 @@
       "category": "Cross-Border Gateway",
       "foundersCount": 30,
       "startupsCount": 3,
-      "hubs": ["Termez Innovation Hub"],
+      "hubs": [
+        "Termez Innovation Hub"
+      ],
       "description": "Southern trade-corridor tech initiatives, cross-border logistics, and multi-currency tools.",
-      "coordinates": { "x": 540, "y": 520 }
+      "coordinates": {
+        "x": 540,
+        "y": 520
+      }
     },
     {
       "id": "jizzakh",
@@ -486,9 +592,14 @@
       "category": "Central Node",
       "foundersCount": 32,
       "startupsCount": 3,
-      "hubs": ["Jizzakh IT Park Node"],
+      "hubs": [
+        "Jizzakh IT Park Node"
+      ],
       "description": "Growing hub for mobility tech, university software incubators, and student talent.",
-      "coordinates": { "x": 590, "y": 300 }
+      "coordinates": {
+        "x": 590,
+        "y": 300
+      }
     },
     {
       "id": "sirdaryo",
@@ -496,9 +607,14 @@
       "category": "Agri-Corridor Node",
       "foundersCount": 25,
       "startupsCount": 2,
-      "hubs": ["Gulistan Digital Lab"],
+      "hubs": [
+        "Gulistan Digital Lab"
+      ],
       "description": "Focused on supply chain connectivity and agricultural software validation.",
-      "coordinates": { "x": 640, "y": 260 }
+      "coordinates": {
+        "x": 640,
+        "y": 260
+      }
     },
     {
       "id": "karakalpakstan",
@@ -506,9 +622,15 @@
       "category": "Aral Sea Innovation Hub",
       "foundersCount": 35,
       "startupsCount": 4,
-      "hubs": ["Nukus IT Park", "Green Tech Incubator"],
+      "hubs": [
+        "Nukus IT Park",
+        "Green Tech Incubator"
+      ],
       "description": "Dedicated to environmental sustainability, water tech solutions, and young remote engineers.",
-      "coordinates": { "x": 160, "y": 180 }
+      "coordinates": {
+        "x": 160,
+        "y": 180
+      }
     },
     {
       "id": "kazakhstan_bridge",
@@ -516,9 +638,15 @@
       "category": "Central Asia Expansion Node",
       "foundersCount": 45,
       "startupsCount": 8,
-      "hubs": ["Astana Hub Partners", "MOST Ventures Network"],
+      "hubs": [
+        "Astana Hub Partners",
+        "MOST Ventures Network"
+      ],
       "description": "Cross-border founder bridge facilitating joint cohorts, investor introductions, and market expansion.",
-      "coordinates": { "x": 880, "y": 120 }
+      "coordinates": {
+        "x": 880,
+        "y": 120
+      }
     }
   ],
   "partners": [
@@ -593,6 +721,15 @@
       "textLogo": "Digital City",
       "url": "https://digitalcity.uz",
       "description": "Regional technology and incubation campus supporting founders across the Fergana Valley corridor."
+    },
+    {
+      "id": "silk-road-forum",
+      "name": "Silk Road Forum",
+      "category": "Major Conference",
+      "role": "Flagship Event Partner",
+      "textLogo": "Silk Road Forum",
+      "url": "https://silkroadforum.uz",
+      "description": "Central Asia's largest business forum with 6,000+ attendees. Founders Community is a key ecosystem partner."
     }
   ],
   "stories": [
@@ -640,6 +777,42 @@
     }
   ],
   "photos": [
+    {
+      "id": "photo-event-01",
+      "title": "Yoshlar Ishlari Agentligi — Accelerator Cohort Ceremony",
+      "category": "Startup Programs",
+      "location": "Yoshlar Ishlari Agentligi",
+      "date": "2026",
+      "image": "assets/gallery/event-yoshlar-ishlari.jpg",
+      "caption": "Certificate ceremony at Yoshlar Ishlari Agentligi — recognizing accelerator cohort taking 120 teams to MVP and 50 to launch."
+    },
+    {
+      "id": "photo-event-02",
+      "title": "Founders Community Regional Gathering",
+      "category": "Community",
+      "location": "Regional Hub",
+      "date": "2026",
+      "image": "assets/gallery/event-founders-stage.png",
+      "caption": "Founders Community regional gathering — uniting 1,500+ founders across all 12 Uzbek regions."
+    },
+    {
+      "id": "photo-event-03",
+      "title": "Founders at HKUST Innovation Wall",
+      "category": "Startup Programs",
+      "location": "Innovation Campus",
+      "date": "2026",
+      "image": "assets/gallery/event-hkust-wall.png",
+      "caption": "Founders Community builders at the HKUST-inspired dream wall — building global ambition from Uzbekistan."
+    },
+    {
+      "id": "photo-event-04",
+      "title": "You Will Never Walk Alone — 100+ Team Session",
+      "category": "Community",
+      "location": "Founders HQ",
+      "date": "2026",
+      "image": "assets/gallery/event-never-walk-alone.png",
+      "caption": "Founders Community team session — celebrating the milestone of growing our nationwide team to 100+ members."
+    },
     {
       "id": "photo-real-11",
       "title": "Founders Community Stage Keynote",
@@ -822,6 +995,34 @@
     }
   ],
   "gallery": [
+    {
+      "id": "gal-event-01",
+      "caption": "Accelerator Cohort Ceremony: 120 Teams to MVP, 50 to Launch",
+      "subtext": "Yoshlar Ishlari Agentligi • Accelerator",
+      "src": "assets/gallery/event-yoshlar-ishlari.jpg",
+      "alt": "Accelerator Cohort Ceremony"
+    },
+    {
+      "id": "gal-event-02",
+      "caption": "Founders Community 12 Regions Gathering",
+      "subtext": "Regional Hub • 1,500+ Founders Network",
+      "src": "assets/gallery/event-founders-stage.png",
+      "alt": "Founders Community Regional Gathering"
+    },
+    {
+      "id": "gal-event-04",
+      "caption": "You Will Never Walk Alone — 100+ Team",
+      "subtext": "Founders HQ • Grew Team to 100+",
+      "src": "assets/gallery/event-never-walk-alone.png",
+      "alt": "Founders Community 100+ Team"
+    },
+    {
+      "id": "gal-event-03",
+      "caption": "Founders at HKUST Innovation Wall",
+      "subtext": "Innovation Campus • Global Ambition",
+      "src": "assets/gallery/event-hkust-wall.png",
+      "alt": "Founders at HKUST Innovation Wall"
+    },
     {
       "id": "gal-01",
       "caption": "Founders Community Demo Day & Certificates",
