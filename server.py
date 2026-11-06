@@ -1021,6 +1021,13 @@ def serve_robots():
         return FileResponse(p, media_type="text/plain")
     raise HTTPException(status_code=404, detail="Robots.txt not found")
 
+@app.get("/google{code}.html")
+def serve_google_verification(code: str):
+    p = os.path.join(BASE_DIR, f"google{code}.html")
+    if os.path.exists(p):
+        return FileResponse(p, media_type="text/html")
+    raise HTTPException(status_code=404, detail="Verification file not found")
+
 @app.get("/staff")
 @app.get("/team")
 @app.get("/staff.html")
