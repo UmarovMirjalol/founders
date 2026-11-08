@@ -322,7 +322,7 @@ def seed_data_if_empty(conn: sqlite3.Connection):
                 f"{city['name']} • {city.get('venue', 'Tech Hub')}",
                 "Pitch Days",
                 city.get("description", "Regional Pitch Day stage bringing founders together."),
-                "https://founders.uz/#join",
+                "https://founders.founderscommunity.xyz/#join",
                 idx
             ))
 
@@ -383,7 +383,7 @@ def seed_data_if_empty(conn: sqlite3.Connection):
                 opp.get("action", "Apply Now"),
                 opp.get("target", "Founders"),
                 opp.get("tag", "Verified"),
-                "https://founders.uz/#join",
+                "https://founders.founderscommunity.xyz/#join",
                 idx
             ))
 

@@ -7,4 +7,4 @@ Disallow: /admin
 Disallow: /admin.html
 Disallow: /api/
 
-Sitemap: https://founders.uz/sitemap.xml
+Sitemap: https://founders.founderscommunity.xyz/sitemap.xml
