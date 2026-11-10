@@ -1,12 +1,13 @@
 {
   "version": 2,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/staff.html", "destination": "/staff", "permanent": true },
+    { "source": "/team", "destination": "/staff", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/staff",
-      "destination": "/staff.html"
-    },
-    {
-      "source": "/team",
       "destination": "/staff.html"
     },
     {

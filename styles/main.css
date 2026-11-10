@@ -257,13 +257,13 @@ button {
 /* ==========================================================================
    04. Reveal Animations (Scroll-entry)
    ========================================================================== */
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity var(--transition-reveal), transform var(--transition-reveal);
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -274,7 +274,7 @@ button {
 .reveal-delay-4 { transition-delay: 0.44s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
     transition: none;

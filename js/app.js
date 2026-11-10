@@ -17,8 +17,10 @@ class App {
   }
 
   async init() {
+    this.initRevealAnimations();
+
     try {
-      const response = await fetch('./data/community.json');
+      const response = await fetch('/data/community.json');
       if (!response.ok) throw new Error('Failed to load community.json');
       this.data = await response.json();
     } catch (e) {
@@ -26,7 +28,6 @@ class App {
       return;
     }
 
-    this.initRevealAnimations();
     this.initMarquee();
     this.initHeroNetwork();
     this.initAnimatedCounters();
